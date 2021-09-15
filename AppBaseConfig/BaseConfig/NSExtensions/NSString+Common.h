@@ -27,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
  2.2  @前小于等于2位 以X＊@显示  比如a＊@qq.com
  */
 - (NSString *)mm_mobileAndEmailEncryption;
+
+/// 获取 WIFI 名称
+- (NSString*)mm_wifiName;
 @end
 
 @interface NSString (Size)

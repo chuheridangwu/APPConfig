@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871BE2BD26F1D98000647952 /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2BC26F1D98000647952 /* NSData+Encryption.m */; };
+		871BE2C126F1DE5200647952 /* BannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2C026F1DE5200647952 /* BannerController.m */; };
 		87CEB40126302EDA003ACA17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40026302EDA003ACA17 /* AppDelegate.m */; };
 		87CEB40426302EDA003ACA17 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40326302EDA003ACA17 /* SceneDelegate.m */; };
 		87CEB40726302EDA003ACA17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40626302EDA003ACA17 /* ViewController.m */; };
@@ -51,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		871BE2BB26F1D98000647952 /* NSData+Encryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
+		871BE2BC26F1D98000647952 /* NSData+Encryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encryption.m"; sourceTree = "<group>"; };
+		871BE2BF26F1DE5200647952 /* BannerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerController.h; sourceTree = "<group>"; };
+		871BE2C026F1DE5200647952 /* BannerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerController.m; sourceTree = "<group>"; };
 		87CEB3FC26302EDA003ACA17 /* AppBaseConfig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBaseConfig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CEB3FF26302EDA003ACA17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87CEB40026302EDA003ACA17 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -128,6 +134,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		871BE2BA26F1D8D400647952 /* NSExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				87CEB452263032E7003ACA17 /* NSMutableString+Method.h */,
+				87CEB45C263032E7003ACA17 /* NSMutableString+Method.m */,
+				87CEB449263032E7003ACA17 /* NSString+Common.h */,
+				87CEB453263032E7003ACA17 /* NSString+Common.m */,
+				87CEB45A263032E7003ACA17 /* NSDate+Method.h */,
+				87CEB44F263032E7003ACA17 /* NSDate+Method.m */,
+				871BE2BB26F1D98000647952 /* NSData+Encryption.h */,
+				871BE2BC26F1D98000647952 /* NSData+Encryption.m */,
+			);
+			path = NSExtensions;
+			sourceTree = "<group>";
+		};
+		871BE2BE26F1DE2E00647952 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				871BE2BF26F1DE5200647952 /* BannerController.h */,
+				871BE2C026F1DE5200647952 /* BannerController.m */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
 		87CEB3F326302EDA003ACA17 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +187,7 @@
 				87CEB40326302EDA003ACA17 /* SceneDelegate.m */,
 				87CEB40526302EDA003ACA17 /* ViewController.h */,
 				87CEB40626302EDA003ACA17 /* ViewController.m */,
+				871BE2BE26F1DE2E00647952 /* Banner */,
 				87CEB441263032E7003ACA17 /* BaseConfig */,
 				87CEB40826302EDA003ACA17 /* Main.storyboard */,
 				87CEB40B26302EDC003ACA17 /* Assets.xcassets */,
@@ -189,8 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				87CEB442263032E7003ACA17 /* mm_header.h */,
+				871BE2BA26F1D8D400647952 /* NSExtensions */,
 				87CEB443263032E7003ACA17 /* SSKeychain */,
-				87CEB446263032E7003ACA17 /* View */,
+				87CEB446263032E7003ACA17 /* UIExtensions */,
 				87CEB45F263032E7003ACA17 /* Lauguage */,
 				87CEB462263032E7003ACA17 /* CustomView */,
 				87CEB465263032E7003ACA17 /* MacroHeader.h */,
@@ -207,35 +239,29 @@
 			path = SSKeychain;
 			sourceTree = "<group>";
 		};
-		87CEB446263032E7003ACA17 /* View */ = {
+		87CEB446263032E7003ACA17 /* UIExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				87CEB447263032E7003ACA17 /* UIButton+Method.h */,
-				87CEB448263032E7003ACA17 /* UIFont+Method.h */,
-				87CEB449263032E7003ACA17 /* NSString+Common.h */,
-				87CEB44A263032E7003ACA17 /* UIImageView+Method.m */,
-				87CEB44B263032E7003ACA17 /* UILabel+Method.m */,
-				87CEB44C263032E7003ACA17 /* UIImage+Method.m */,
-				87CEB44D263032E7003ACA17 /* UIDevice+Method.h */,
-				87CEB44E263032E7003ACA17 /* UIView+Frame.m */,
-				87CEB44F263032E7003ACA17 /* NSDate+Method.m */,
 				87CEB450263032E7003ACA17 /* NSLayoutConstraint+Property.h */,
-				87CEB451263032E7003ACA17 /* UIBarButtonItem+Method.h */,
-				87CEB452263032E7003ACA17 /* NSMutableString+Method.h */,
-				87CEB453263032E7003ACA17 /* NSString+Common.m */,
-				87CEB454263032E7003ACA17 /* UIFont+Method.m */,
-				87CEB455263032E7003ACA17 /* UIButton+Method.m */,
-				87CEB456263032E7003ACA17 /* UIDevice+Method.m */,
-				87CEB457263032E7003ACA17 /* UIImage+Method.h */,
-				87CEB458263032E7003ACA17 /* UILabel+Method.h */,
-				87CEB459263032E7003ACA17 /* UIImageView+Method.h */,
-				87CEB45A263032E7003ACA17 /* NSDate+Method.h */,
-				87CEB45B263032E7003ACA17 /* UIView+Frame.h */,
-				87CEB45C263032E7003ACA17 /* NSMutableString+Method.m */,
 				87CEB45D263032E7003ACA17 /* NSLayoutConstraint+Property.m */,
+				87CEB451263032E7003ACA17 /* UIBarButtonItem+Method.h */,
 				87CEB45E263032E7003ACA17 /* UIBarButtonItem+Method.m */,
+				87CEB447263032E7003ACA17 /* UIButton+Method.h */,
+				87CEB455263032E7003ACA17 /* UIButton+Method.m */,
+				87CEB44D263032E7003ACA17 /* UIDevice+Method.h */,
+				87CEB456263032E7003ACA17 /* UIDevice+Method.m */,
+				87CEB448263032E7003ACA17 /* UIFont+Method.h */,
+				87CEB454263032E7003ACA17 /* UIFont+Method.m */,
+				87CEB457263032E7003ACA17 /* UIImage+Method.h */,
+				87CEB44C263032E7003ACA17 /* UIImage+Method.m */,
+				87CEB459263032E7003ACA17 /* UIImageView+Method.h */,
+				87CEB44A263032E7003ACA17 /* UIImageView+Method.m */,
+				87CEB458263032E7003ACA17 /* UILabel+Method.h */,
+				87CEB44B263032E7003ACA17 /* UILabel+Method.m */,
+				87CEB45B263032E7003ACA17 /* UIView+Frame.h */,
+				87CEB44E263032E7003ACA17 /* UIView+Frame.m */,
 			);
-			path = View;
+			path = UIExtensions;
 			sourceTree = "<group>";
 		};
 		87CEB45F263032E7003ACA17 /* Lauguage */ = {
@@ -392,6 +418,7 @@
 				87CEB40726302EDA003ACA17 /* ViewController.m in Sources */,
 				87CEB468263032E7003ACA17 /* UILabel+Method.m in Sources */,
 				87CEB46D263032E7003ACA17 /* UIFont+Method.m in Sources */,
+				871BE2BD26F1D98000647952 /* NSData+Encryption.m in Sources */,
 				87CEB46A263032E7003ACA17 /* UIView+Frame.m in Sources */,
 				87CEB46C263032E7003ACA17 /* NSString+Common.m in Sources */,
 				87CEB40126302EDA003ACA17 /* AppDelegate.m in Sources */,
@@ -402,6 +429,7 @@
 				87CEB466263032E7003ACA17 /* SSKeychain.m in Sources */,
 				87CEB474263032E7003ACA17 /* MLongTitleLabel.m in Sources */,
 				87CEB472263032E7003ACA17 /* UIBarButtonItem+Method.m in Sources */,
+				871BE2C126F1DE5200647952 /* BannerController.m in Sources */,
 				87CEB467263032E7003ACA17 /* UIImageView+Method.m in Sources */,
 				87CEB46B263032E7003ACA17 /* NSDate+Method.m in Sources */,
 			);
@@ -576,12 +604,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46HPWLF7TN;
 				INFOPLIST_FILE = AppBaseConfig/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.AppBaseConfig;
+				PRODUCT_BUNDLE_IDENTIFIER = teff.cd.com.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -593,12 +623,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46HPWLF7TN;
 				INFOPLIST_FILE = AppBaseConfig/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.test.AppBaseConfig;
+				PRODUCT_BUNDLE_IDENTIFIER = teff.cd.com.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

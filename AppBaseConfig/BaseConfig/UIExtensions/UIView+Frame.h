@@ -44,6 +44,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mm_cutRounded:(CGFloat)size;
 
 
+/**
+ * 添加渐变色
+ * axis 渐变方向
+ * startColor  初始颜色
+ * endColor 结束颜色
+ */
+- (void)mm_gradientLayer:(UILayoutConstraintAxis)axis startColor:(UIColor*)startColor endColor:(UIColor*)endColor;
+
+
 /// 添加阴影
 /// @param radius 圆角
 /// @param color 颜色

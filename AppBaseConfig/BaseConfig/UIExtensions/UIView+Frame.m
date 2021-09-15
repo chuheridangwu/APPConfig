@@ -210,6 +210,53 @@
     self.clipsToBounds=YES;
 }
 
+/**
+ * 切某个角的圆角
+ * rectCorner  方向
+ *  圆角大小
+ */
+-(void)mm_cutRoundOnCorner:(UIRectCorner)rectCorner radius:(float)radius
+{
+    UIBezierPath *maskPath  = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:rectCorner cornerRadii:CGSizeMake(radius, radius)];
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    maskLayer.frame         = self.bounds;
+    maskLayer.path          = maskPath.CGPath;
+    [self.layer setMask:maskLayer];
+}
+
+/**
+ * 添加渐变色
+ * axis 渐变方向
+ * startColor  初始颜色
+ * endColor 结束颜色
+ */
+- (void)mm_gradientLayer:(UILayoutConstraintAxis)axis startColor:(UIColor*)startColor endColor:(UIColor*)endColor
+{
+    //初始化CAGradientlayer对象，使它的大小为UIView的大小
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.frame = self.bounds;
+    
+    //设置渐变区域的起始和终止位置（范围为0-1,起始左上角为(0,0),结束为右下角为(1,1)）
+    if (axis == UILayoutConstraintAxisHorizontal) {
+        gradientLayer.startPoint = CGPointMake(0, 0.5);
+        gradientLayer.endPoint = CGPointMake(1,0.5);
+    }else{
+        gradientLayer.startPoint = CGPointMake(1, 0);
+        gradientLayer.endPoint = CGPointMake(1, 1);
+    }
+    
+    //设置颜色数组
+    gradientLayer.colors = @[(__bridge id)startColor.CGColor,
+                             (__bridge id)endColor.CGColor];
+    
+    //设置颜色分割点（范围：0-1)，如果颜色比较多可以使用多个颜色分区
+    gradientLayer.locations = @[@(0.0f), @(1.0f)];
+    
+    //将CAGradientlayer对象添加在我们要设置背景色的视图的layer层
+    [self.layer insertSublayer:gradientLayer atIndex:0];
+//    [self.layer addSublayer:gradientLayer];
+}
+
 // 添加边框
 - (void)mm_shadowView:(CGFloat)radius color:(UIColor *)color opacity:(CGFloat)opacity offset:(CGSize)offset shadowRadius:(CGFloat)shadowRadius
 {

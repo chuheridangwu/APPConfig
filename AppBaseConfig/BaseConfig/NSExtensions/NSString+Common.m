@@ -10,6 +10,7 @@
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 #include <net/if.h>
+#import <SystemConfiguration/CaptiveNetwork.h>
 
 @implementation NSString (Common)
 /** 去掉所有的空格、换行符（包括中间的） */
@@ -75,6 +76,33 @@
     }else{
         return @"";
     }
+}
+
+- (NSString*)mm_wifiName
+{
+    NSString *wifiName = nil;
+    
+    CFArrayRef wifiInterfaces = CNCopySupportedInterfaces();
+    
+    if (!wifiInterfaces) {
+        return nil;
+    }
+    
+    NSArray *interfaces = (__bridge NSArray *)wifiInterfaces;
+    
+    for (NSString *interfaceName in interfaces) {
+        CFDictionaryRef dictRef = CNCopyCurrentNetworkInfo((__bridge CFStringRef)(interfaceName));
+        
+        if (dictRef) {
+            NSDictionary *networkInfo = (__bridge NSDictionary *)dictRef;
+            NSLog(@"network info -> %@", networkInfo);
+            wifiName = [networkInfo objectForKey:(__bridge NSString *)kCNNetworkInfoKeySSID];
+            CFRelease(dictRef);
+        }
+    }
+    
+    CFRelease(wifiInterfaces);
+    return wifiName;
 }
 @end
 

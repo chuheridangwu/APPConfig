@@ -17,7 +17,7 @@
 {
     objc_setAssociatedObject(self, @selector(widthAutoFitScreen), @(widthAutoFitScreen), OBJC_ASSOCIATION_COPY_NONATOMIC);
     if (widthAutoFitScreen) {
-        self.constant = mmLayout_Width_Ratio(self.constant);
+        self.constant = mm_Layout_Width_Ratio(self.constant);
     } else {
         self.constant = self.constant;
     }
@@ -33,7 +33,7 @@
 {
     objc_setAssociatedObject(self, @selector(heightAutoFitScreen), @(heightAutoFitScreen), OBJC_ASSOCIATION_COPY_NONATOMIC);
     if (heightAutoFitScreen) {
-        self.constant = mmLayout_Height_Ratio(self.constant);
+        self.constant = mm_Layout_Height_Ratio(self.constant);
     } else {
         self.constant = self.constant;
     }

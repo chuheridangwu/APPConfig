@@ -19,19 +19,19 @@
 //屏幕宽度
 #define Screen_Width    [[UIScreen mainScreen] bounds].size.width
 //屏幕比例
-#define ScreenSizeScale (Screen_Width/375.f)
+#define ScreenWidthScale (Screen_Width/375.f)
 
 //齐刘海
-#define MM_Is_Iphone_Xm  (WD_StatusBarHeight>20)
+#define mm_Is_Iphone_Xm  (WD_StatusBarHeight>20)
 //底部高度
-#define MMBottomMargin   ((WD_StatusBarHeight>20) ? 34 : 0)
+#define mm_BottomMargin   ((WD_StatusBarHeight>20) ? 34 : 0)
 
 //屏幕适配 根据屏幕宽375 高667 来做适配的
-#define mmLayout_Width_Ratio(x)          (roundf((x)*ScreenSizeScale))
-#define mmLayout_Height_Ratio(x)         (roundf((x)*Screen_Height/667.0f))
+#define mm_Layout_Width_Ratio(x)          (roundf((x)*ScreenWidthScale))
+#define mm_Layout_Height_Ratio(x)         (roundf((x)*Screen_Height/667.0f))
 
 //获取图片资源
-#define mmGetImage(imageName)    [UIImage imageNamed:imageName]
+#define mm_GetImage(imageName)    [UIImage imageNamed:imageName]
 
 // 设置弱引用
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
@@ -43,19 +43,23 @@
 # define NSLog(...);
 #endif
 
+
+
 //获取沙盒目录
-#define mmPathTemp NSTemporaryDirectory()    //temp
-#define mmPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] //Document
-#define mmPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]  //Cache
+#define mm_PathTemp NSTemporaryDirectory()    //temp
+#define mm_PathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] //Document
+#define mm_PathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]  //Cache
+
+
 
 //16进制颜色
-#define MMColorFromHex(s)    MMColorFromAHex(s,1.0)
-#define MMColorFromAHex(s,a) [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s & 0xFF00) >> 8))/255.0 blue:((s & 0xFF))/255.0 alpha:a]
+#define mm_ColorFromHex(s)    mm_ColorFromAHex(s,1.0)
+#define mm_ColorFromAHex(s,a) [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s & 0xFF00) >> 8))/255.0 blue:((s & 0xFF))/255.0 alpha:a]
 //随机颜色
-#define MMRandomColor        [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+#define mm_RandomColor        [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
 //RGB颜色
-#define MMRGBColor(r, g, b)      [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-#define MMRGBAColor(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a]
+#define mm_RGBColor(r, g, b)      [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define mm_RGBAColor(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a]
 
 #endif /* __OBJC__ */
 

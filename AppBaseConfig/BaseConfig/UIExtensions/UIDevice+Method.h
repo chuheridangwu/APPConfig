@@ -3,7 +3,7 @@
 //  CategoryProject
 //
 //  Created by mlive on 2021/4/20.
-//
+// 设备信息
 
 #import <UIKit/UIKit.h>
 
