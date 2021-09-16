@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UILabel (Method)
 /// 创建label
-+ (UILabel *)mm_createLabel:(CGRect)frame
++ (UILabel *)mm_createLabel:(UIColor *)color
                    fontSize:(CGFloat)fontSize
               textAlignment:(NSTextAlignment)alignment
                        text:(NSString *)text;

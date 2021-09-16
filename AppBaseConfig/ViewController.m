@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "BannerController.h"
+#import "CategoryController.h"
 
 #import "UIView+Frame.h"
 #import "MacroHeader.h"
@@ -24,7 +25,7 @@ typedef NS_ENUM(NSInteger,CellType) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = @[@"Banner"];
+    self.dataSource = @[@"Banner",@"分类"];
     [self.view addSubview:self.tableView];
 }
 
@@ -40,8 +41,24 @@ static NSString *identifier = @"UITableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    BannerController *bannerVC = [[BannerController alloc] init];
-    [self.navigationController pushViewController:bannerVC animated:YES];
+    switch (indexPath.row) { // 省事，先这样写
+        case 0:
+        {
+            BannerController *bannerVC = [[BannerController alloc] init];
+            [self.navigationController pushViewController:bannerVC animated:YES];
+        }
+            break;
+        case 1:
+        {
+            CategoryController *bannerVC = [[CategoryController alloc] init];
+            [self.navigationController pushViewController:bannerVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+
 }
 
 - (UITableView *)tableView{

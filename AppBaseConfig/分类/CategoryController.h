@@ -1,5 +1,5 @@
 //
-//  BannerController.h
+//  CategoryController.h
 //  AppBaseConfig
 //
 //  Created by mlive on 2021/9/15.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BannerController : QMUICommonViewController
+@interface CategoryController : QMUICommonViewController
 
 @end
 

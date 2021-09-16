@@ -11,16 +11,16 @@
 
 @implementation UILabel (Method)
 
-+ (UILabel *)mm_createLabel:(CGRect)frame
++ (UILabel *)mm_createLabel:(UIColor *)color
                    fontSize:(CGFloat)fontSize
               textAlignment:(NSTextAlignment)alignment
                        text:(NSString *)text
 {
-    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.font = [UIFont systemFontOfSize:fontSize];
     label.textAlignment = alignment;
     label.text = text;
-    label.textColor = [UIColor blackColor];
+    label.textColor = color;
     return label;
 }
 

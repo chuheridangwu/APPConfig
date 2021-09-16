@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,12 @@
 		871BE2D326F1EECA00647952 /* HQImagePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2CD26F1EECA00647952 /* HQImagePageControl.m */; };
 		871BE2D926F1F10900647952 /* DSRHomeHeadPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2D526F1F10900647952 /* DSRHomeHeadPreview.m */; };
 		871BE2DA26F1F10900647952 /* DSRPreviewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2D826F1F10900647952 /* DSRPreviewFlowLayout.m */; };
+		871BE2DD26F1F97700647952 /* CategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2DC26F1F97700647952 /* CategoryController.m */; };
+		871BE2E126F1FA7E00647952 /* CategoryView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2E026F1FA7E00647952 /* CategoryView1.m */; };
+		871BE2E426F1FA8F00647952 /* CategoryView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2E326F1FA8F00647952 /* CategoryView2.m */; };
+		871BE2E726F1FAC600647952 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2E626F1FAC600647952 /* CategoryModel.m */; };
+		871BE2EB26F202CF00647952 /* home_hot_top@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871BE2E926F202CE00647952 /* home_hot_top@3x.png */; };
+		871BE2EC26F202CF00647952 /* home_hot_bottom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871BE2EA26F202CF00647952 /* home_hot_bottom@3x.png */; };
 		87CEB40126302EDA003ACA17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40026302EDA003ACA17 /* AppDelegate.m */; };
 		87CEB40426302EDA003ACA17 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40326302EDA003ACA17 /* SceneDelegate.m */; };
 		87CEB40726302EDA003ACA17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40626302EDA003ACA17 /* ViewController.m */; };
@@ -82,6 +88,17 @@
 		871BE2D626F1F10900647952 /* DSRHomeHeadPreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRHomeHeadPreview.h; sourceTree = "<group>"; };
 		871BE2D726F1F10900647952 /* DSRPreviewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSRPreviewFlowLayout.h; sourceTree = "<group>"; };
 		871BE2D826F1F10900647952 /* DSRPreviewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSRPreviewFlowLayout.m; sourceTree = "<group>"; };
+		871BE2DB26F1F97700647952 /* CategoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryController.h; sourceTree = "<group>"; };
+		871BE2DC26F1F97700647952 /* CategoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryController.m; sourceTree = "<group>"; };
+		871BE2DF26F1FA7E00647952 /* CategoryView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryView1.h; sourceTree = "<group>"; };
+		871BE2E026F1FA7E00647952 /* CategoryView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryView1.m; sourceTree = "<group>"; };
+		871BE2E226F1FA8F00647952 /* CategoryView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryView2.h; sourceTree = "<group>"; };
+		871BE2E326F1FA8F00647952 /* CategoryView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryView2.m; sourceTree = "<group>"; };
+		871BE2E526F1FAC600647952 /* CategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		871BE2E626F1FAC600647952 /* CategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		871BE2E826F1FDAA00647952 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		871BE2E926F202CE00647952 /* home_hot_top@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_hot_top@3x.png"; sourceTree = "<group>"; };
+		871BE2EA26F202CF00647952 /* home_hot_bottom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_hot_bottom@3x.png"; sourceTree = "<group>"; };
 		87CEB3FC26302EDA003ACA17 /* AppBaseConfig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBaseConfig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CEB3FF26302EDA003ACA17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87CEB40026302EDA003ACA17 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -165,6 +182,8 @@
 		871BE2BA26F1D8D400647952 /* NSExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				87CEB450263032E7003ACA17 /* NSLayoutConstraint+Property.h */,
+				87CEB45D263032E7003ACA17 /* NSLayoutConstraint+Property.m */,
 				87CEB452263032E7003ACA17 /* NSMutableString+Method.h */,
 				87CEB45C263032E7003ACA17 /* NSMutableString+Method.m */,
 				87CEB449263032E7003ACA17 /* NSString+Common.h */,
@@ -216,6 +235,23 @@
 			path = DSRBanner;
 			sourceTree = "<group>";
 		};
+		871BE2DE26F1F97F00647952 /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				871BE2EA26F202CF00647952 /* home_hot_bottom@3x.png */,
+				871BE2E926F202CE00647952 /* home_hot_top@3x.png */,
+				871BE2DB26F1F97700647952 /* CategoryController.h */,
+				871BE2DC26F1F97700647952 /* CategoryController.m */,
+				871BE2E526F1FAC600647952 /* CategoryModel.h */,
+				871BE2E626F1FAC600647952 /* CategoryModel.m */,
+				871BE2DF26F1FA7E00647952 /* CategoryView1.h */,
+				871BE2E026F1FA7E00647952 /* CategoryView1.m */,
+				871BE2E226F1FA8F00647952 /* CategoryView2.h */,
+				871BE2E326F1FA8F00647952 /* CategoryView2.m */,
+			);
+			path = "分类";
+			sourceTree = "<group>";
+		};
 		87CEB3F326302EDA003ACA17 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +283,7 @@
 				87CEB40326302EDA003ACA17 /* SceneDelegate.m */,
 				87CEB40526302EDA003ACA17 /* ViewController.h */,
 				87CEB40626302EDA003ACA17 /* ViewController.m */,
+				871BE2DE26F1F97F00647952 /* 分类 */,
 				871BE2BE26F1DE2E00647952 /* Banner */,
 				87CEB441263032E7003ACA17 /* BaseConfig */,
 				87CEB40826302EDA003ACA17 /* Main.storyboard */,
@@ -286,6 +323,7 @@
 				87CEB45F263032E7003ACA17 /* Lauguage */,
 				87CEB462263032E7003ACA17 /* CustomView */,
 				87CEB465263032E7003ACA17 /* MacroHeader.h */,
+				871BE2E826F1FDAA00647952 /* PrefixHeader.pch */,
 			);
 			path = BaseConfig;
 			sourceTree = "<group>";
@@ -302,8 +340,6 @@
 		87CEB446263032E7003ACA17 /* UIExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				87CEB450263032E7003ACA17 /* NSLayoutConstraint+Property.h */,
-				87CEB45D263032E7003ACA17 /* NSLayoutConstraint+Property.m */,
 				87CEB451263032E7003ACA17 /* UIBarButtonItem+Method.h */,
 				87CEB45E263032E7003ACA17 /* UIBarButtonItem+Method.m */,
 				87CEB447263032E7003ACA17 /* UIButton+Method.h */,
@@ -370,6 +406,7 @@
 				87CEB3F826302EDA003ACA17 /* Sources */,
 				87CEB3F926302EDA003ACA17 /* Frameworks */,
 				87CEB3FA26302EDA003ACA17 /* Resources */,
+				EBAD14374B7B5F62BD0F583D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -465,9 +502,11 @@
 				871BE2C926F1EDE300647952 /* h3.jpg in Resources */,
 				871BE2C726F1EDE300647952 /* h2.jpg in Resources */,
 				871BE2C826F1EDE300647952 /* h4.jpg in Resources */,
+				871BE2EC26F202CF00647952 /* home_hot_bottom@3x.png in Resources */,
 				87CEB40F26302EDC003ACA17 /* LaunchScreen.storyboard in Resources */,
 				87CEB40C26302EDC003ACA17 /* Assets.xcassets in Resources */,
 				871BE2C626F1EDE300647952 /* h1.jpg in Resources */,
+				871BE2EB26F202CF00647952 /* home_hot_top@3x.png in Resources */,
 				87CEB40A26302EDA003ACA17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +528,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		EBAD14374B7B5F62BD0F583D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppBaseConfig/Pods-AppBaseConfig-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppBaseConfig/Pods-AppBaseConfig-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppBaseConfig/Pods-AppBaseConfig-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F4BF060AC7838D234B5B1779 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -520,15 +576,18 @@
 			files = (
 				87CEB470263032E7003ACA17 /* NSMutableString+Method.m in Sources */,
 				871BE2D126F1EECA00647952 /* HQFlowView.m in Sources */,
+				871BE2DD26F1F97700647952 /* CategoryController.m in Sources */,
 				87CEB46F263032E7003ACA17 /* UIDevice+Method.m in Sources */,
 				87CEB473263032E7003ACA17 /* NSBundle+Language.m in Sources */,
 				87CEB469263032E7003ACA17 /* UIImage+Method.m in Sources */,
 				87CEB40726302EDA003ACA17 /* ViewController.m in Sources */,
 				87CEB468263032E7003ACA17 /* UILabel+Method.m in Sources */,
+				871BE2E126F1FA7E00647952 /* CategoryView1.m in Sources */,
 				871BE2D926F1F10900647952 /* DSRHomeHeadPreview.m in Sources */,
 				87CEB46D263032E7003ACA17 /* UIFont+Method.m in Sources */,
 				871BE2BD26F1D98000647952 /* NSData+Encryption.m in Sources */,
 				87CEB46A263032E7003ACA17 /* UIView+Frame.m in Sources */,
+				871BE2E726F1FAC600647952 /* CategoryModel.m in Sources */,
 				871BE2D226F1EECA00647952 /* HQIndexBannerSubview.m in Sources */,
 				87CEB46C263032E7003ACA17 /* NSString+Common.m in Sources */,
 				87CEB40126302EDA003ACA17 /* AppDelegate.m in Sources */,
@@ -540,6 +599,7 @@
 				87CEB466263032E7003ACA17 /* SSKeychain.m in Sources */,
 				871BE2DA26F1F10900647952 /* DSRPreviewFlowLayout.m in Sources */,
 				87CEB474263032E7003ACA17 /* MLongTitleLabel.m in Sources */,
+				871BE2E426F1FA8F00647952 /* CategoryView2.m in Sources */,
 				87CEB472263032E7003ACA17 /* UIBarButtonItem+Method.m in Sources */,
 				871BE2C126F1DE5200647952 /* BannerController.m in Sources */,
 				87CEB467263032E7003ACA17 /* UIImageView+Method.m in Sources */,
@@ -718,6 +778,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46HPWLF7TN;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AppBaseConfig/BaseConfig/PrefixHeader.pch";
 				INFOPLIST_FILE = AppBaseConfig/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -738,6 +799,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46HPWLF7TN;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AppBaseConfig/BaseConfig/PrefixHeader.pch";
 				INFOPLIST_FILE = AppBaseConfig/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

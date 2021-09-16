@@ -13,9 +13,9 @@ target 'AppBaseConfig' do
  pod 'AFNetworking'
  pod 'SDWebImage'
  pod 'SDCycleScrollView'
-
+ pod 'QMUIKit'
+ 
 # pod 'MJRefresh'
-# pod 'QMUIKit'
 # pod 'FDFullscreenPopGesture'
 # pod 'BRPickerView'
 # pod 'CRBoxInputView'

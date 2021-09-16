@@ -21,6 +21,26 @@
     return btn;
 }
 
++ (instancetype)mm_createBtnWithTitle:(NSString *)title
+                            color:(UIColor *)color
+                             font:(CGFloat)font
+                            block:(void(^)(QMUIButton *sender))block {
+    
+    QMUIButton *view = [QMUIButton new];
+    view.titleLabel.font = [UIFont systemFontOfSize:font];
+    [view setTitle:title forState:UIControlStateNormal];
+    [view setTitleColor:color forState:UIControlStateNormal];
+
+    if (block) {
+        
+        [view setQmui_tapBlock:^(__kindof UIControl *sender) {
+            !block ?: block(sender);
+        }];
+    }
+    
+    return view;
+}
+
 /// 高亮颜色设置
 /// @param color 颜色
 - (void)mm_setHightLightWithColor:(UIColor *)color {

@@ -170,7 +170,6 @@ typedef enum{
  *  @param subView 点击的控件
  *  @param subIndex    点击控件的index
  *
- *  @return <#return value description#>
  */
 - (void)didSelectCell:(HQIndexBannerSubview *)subView withSubViewIndex:(NSInteger)subIndex;
 

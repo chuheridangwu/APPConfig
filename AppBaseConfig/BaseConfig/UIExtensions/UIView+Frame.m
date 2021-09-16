@@ -425,3 +425,38 @@
      return returnImage;
 }
 @end
+
+
+#pragma mark -- 添加手势
+
+@implementation UIView(GestureRecognizer )
+
+- (void)mm_addTapGesture:(id)target sel:(SEL)selector {
+    self.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:target action:selector];
+    [self addGestureRecognizer:tap];
+}
+
+- (void)mm_addPanGesture:(id)target sel:(SEL)selector
+{
+    self.userInteractionEnabled = YES;
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:selector];
+    [self addGestureRecognizer:pan];
+}
+
+- (void)mm_addTapGesture:(id)target selector:(SEL)selector {
+    
+    self.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:target action:selector];
+    tap.cancelsTouchesInView = NO;
+    [self addGestureRecognizer:tap];
+}
+
+- (void)mm_addLongPressGesture:(id)target sel:(SEL)selector
+{
+    self.userInteractionEnabled = YES;
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:target action:selector];
+    [self addGestureRecognizer:longPress];
+}
+
+@end

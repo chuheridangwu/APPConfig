@@ -23,8 +23,18 @@ NS_ASSUME_NONNULL_BEGIN
                         title:(NSString *)title
                     textColor:(UIColor *)textColor
                        target:(nullable id)target action:(SEL)action;
-
-
+/**
+ 创建一个按钮
+ @param title 文字
+ @param color 文字颜色
+ @param font  字体大小
+ @param block  事件
+ @return 一个按钮
+ */
++ (instancetype)mm_createBtnWithTitle:(NSString *)title
+                            color:(UIColor *)color
+                             font:(CGFloat)font
+                                block:(void(^)(QMUIButton *sender))block;
 /// 高亮颜色设置
 /// @param color 颜色
 - (void)mm_setHightLightWithColor:(UIColor *)color;

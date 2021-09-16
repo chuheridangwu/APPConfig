@@ -27,8 +27,8 @@
 #define mm_BottomMargin   ((WD_StatusBarHeight>20) ? 34 : 0)
 
 //屏幕适配 根据屏幕宽375 高667 来做适配的
-#define mm_Layout_Width_Ratio(x)          (roundf((x)*ScreenWidthScale))
-#define mm_Layout_Height_Ratio(x)         (roundf((x)*Screen_Height/667.0f))
+#define mm_Width_Fix(x)          (roundf((x)*ScreenWidthScale))
+#define mm_Height_Fix(x)         (roundf((x)*Screen_Height/667.0f))
 
 //获取图片资源
 #define mm_GetImage(imageName)    [UIImage imageNamed:imageName]
@@ -60,6 +60,18 @@
 //RGB颜色
 #define mm_RGBColor(r, g, b)      [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define mm_RGBAColor(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a]
+
+//布局
+#define mm_size(w, h)              CGSizeMake(mm_Width_Fix(w), mm_Height_Fix(h))
+
+#define mas_t(size)             make.top.mas_equalTo(mm_Height_Fix(size))
+#define mas_b(size)             make.bottom.mas_equalTo(mm_Height_Fix(size))
+#define mas_l(size)             make.left.mas_equalTo(mm_Width_Fix(size))
+#define mas_r(size)             make.right.mas_equalTo(mm_Width_Fix(size))
+#define mas_w(size)             make.width.mas_equalTo(mm_Width_Fix(size))
+#define mas_h(size)             make.height.mas_equalTo(mm_Height_Fix(size))
+#define mas_s(w,h)              make.size.mas_equalTo(mm_size(w,h))
+#define mas_v(value)            (void)make.value
 
 #endif /* __OBJC__ */
 

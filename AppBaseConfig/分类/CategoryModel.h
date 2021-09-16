@@ -1,15 +1,15 @@
 //
-//  BannerController.h
+//  CategoryModel.h
 //  AppBaseConfig
 //
 //  Created by mlive on 2021/9/15.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BannerController : QMUICommonViewController
+@interface CategoryModel : NSObject
 
 @end
 

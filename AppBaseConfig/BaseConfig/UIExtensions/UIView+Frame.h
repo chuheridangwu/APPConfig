@@ -102,4 +102,12 @@ NS_ASSUME_NONNULL_BEGIN
                                       height:(CGFloat)height;
 @end
 
+#pragma mark --- 添加手势
+@interface UIView (GestureRecognizer)
+- (void)mm_addTapGesture:(id)target sel:(SEL)selector;
+- (void)mm_addPanGesture:(id)target sel:(SEL)selector;
+- (void)mm_addTapGesture:(id)target selector:(SEL)selector;
+- (void)mm_addLongPressGesture:(id)target sel:(SEL)selector;
+@end
+
 NS_ASSUME_NONNULL_END
