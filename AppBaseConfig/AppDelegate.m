@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AppPreviewView.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
     
     //键盘
     [IQKeyboardManager sharedManager].enable = YES;

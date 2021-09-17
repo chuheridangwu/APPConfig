@@ -17,6 +17,7 @@
 #import "NSDate+Method.h"
 #import "UIView+Frame.h"
 #import "NSBundle+Language.h"
+#import "NSObject+Method.h"
 
 
 #endif /* mm_header_h */

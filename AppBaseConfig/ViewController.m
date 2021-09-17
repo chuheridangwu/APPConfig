@@ -12,6 +12,7 @@
 
 #import "UIView+Frame.h"
 #import "MacroHeader.h"
+#import "AppPreviewView.h"
 
 typedef NS_ENUM(NSInteger,CellType) {
     CellType_Banner = 0,
@@ -27,12 +28,17 @@ typedef NS_ENUM(NSInteger,CellType) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     
-    self.dataSource = @[[Model initWithTitle:@"轮播图" name:@"BannerController"],
-    [Model initWithTitle:@"首页分类item" name:@"CategoryController"],
-    [Model initWithTitle:@"直播间点赞动画" name:@"DianZanController"]];
+    self.dataSource = @[
+        [Model initWithTitle:@"轮播图" name:@"BannerController"],
+        [Model initWithTitle:@"首页分类item" name:@"CategoryController"],
+        [Model initWithTitle:@"直播间点赞动画" name:@"DianZanController"]
+    ];
 
     [self.view addSubview:self.tableView];
+    
+//    [AppPreviewView showPreviewView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
