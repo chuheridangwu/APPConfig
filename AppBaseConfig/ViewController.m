@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "BannerController.h"
 #import "CategoryController.h"
+#import "DianZanController.h"
 
 #import "UIView+Frame.h"
 #import "MacroHeader.h"
@@ -16,8 +17,9 @@ typedef NS_ENUM(NSInteger,CellType) {
     CellType_Banner = 0,
 };
 
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic,strong)NSArray *dataSource;
+@property (nonatomic,strong)NSArray <Model*>*dataSource;
 @property (nonatomic,strong)UITableView *tableView;
 @end
 
@@ -25,7 +27,11 @@ typedef NS_ENUM(NSInteger,CellType) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = @[@"Banner",@"分类"];
+    
+    self.dataSource = @[[Model initWithTitle:@"轮播图" name:@"BannerController"],
+    [Model initWithTitle:@"首页分类item" name:@"CategoryController"],
+    [Model initWithTitle:@"直播间点赞动画" name:@"DianZanController"]];
+
     [self.view addSubview:self.tableView];
 }
 
@@ -36,29 +42,15 @@ typedef NS_ENUM(NSInteger,CellType) {
 static NSString *identifier = @"UITableViewCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    cell.textLabel.text = self.dataSource[indexPath.row];
+    Model *model =  self.dataSource[indexPath.row];
+    cell.textLabel.text = model.title;
     return  cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    switch (indexPath.row) { // 省事，先这样写
-        case 0:
-        {
-            BannerController *bannerVC = [[BannerController alloc] init];
-            [self.navigationController pushViewController:bannerVC animated:YES];
-        }
-            break;
-        case 1:
-        {
-            CategoryController *bannerVC = [[CategoryController alloc] init];
-            [self.navigationController pushViewController:bannerVC animated:YES];
-        }
-            break;
-            
-        default:
-            break;
-    }
-
+    Model *model =  self.dataSource[indexPath.row];
+    QMUICommonViewController *controller = (QMUICommonViewController*)[[NSClassFromString(model.controllerName) alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (UITableView *)tableView{
@@ -71,5 +63,20 @@ static NSString *identifier = @"UITableViewCell";
     return _tableView;
 }
 
+
+@end
+
+
+
+
+
+@implementation Model
+
++ (Model*)initWithTitle:(NSString*)title name:(NSString*)name{
+    Model *model = [[Model alloc] init];
+    model.title = title;
+    model.controllerName = name;
+    return model;
+}
 
 @end

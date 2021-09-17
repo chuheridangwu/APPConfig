@@ -12,3 +12,11 @@
 
 @end
 
+
+
+@interface Model : NSObject
+@property(nonatomic,strong)NSString *title;
+@property(nonatomic,strong)NSString *controllerName;
+
++ (Model*)initWithTitle:(NSString*)title name:(NSString*)name;
+@end

@@ -24,6 +24,8 @@
 		871BE2E726F1FAC600647952 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2E626F1FAC600647952 /* CategoryModel.m */; };
 		871BE2EB26F202CF00647952 /* home_hot_top@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871BE2E926F202CE00647952 /* home_hot_top@3x.png */; };
 		871BE2EC26F202CF00647952 /* home_hot_bottom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871BE2EA26F202CF00647952 /* home_hot_bottom@3x.png */; };
+		8756526026F496960029C2E5 /* DianZanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8756525F26F496960029C2E5 /* DianZanController.m */; };
+		8756526326F496D60029C2E5 /* AdmireAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8756526226F496D60029C2E5 /* AdmireAnimationView.m */; };
 		87CEB40126302EDA003ACA17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40026302EDA003ACA17 /* AppDelegate.m */; };
 		87CEB40426302EDA003ACA17 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40326302EDA003ACA17 /* SceneDelegate.m */; };
 		87CEB40726302EDA003ACA17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40626302EDA003ACA17 /* ViewController.m */; };
@@ -99,6 +101,10 @@
 		871BE2E826F1FDAA00647952 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		871BE2E926F202CE00647952 /* home_hot_top@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_hot_top@3x.png"; sourceTree = "<group>"; };
 		871BE2EA26F202CF00647952 /* home_hot_bottom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_hot_bottom@3x.png"; sourceTree = "<group>"; };
+		8756525E26F496960029C2E5 /* DianZanController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DianZanController.h; sourceTree = "<group>"; };
+		8756525F26F496960029C2E5 /* DianZanController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DianZanController.m; sourceTree = "<group>"; };
+		8756526126F496D60029C2E5 /* AdmireAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmireAnimationView.h; sourceTree = "<group>"; };
+		8756526226F496D60029C2E5 /* AdmireAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmireAnimationView.m; sourceTree = "<group>"; };
 		87CEB3FC26302EDA003ACA17 /* AppBaseConfig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBaseConfig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CEB3FF26302EDA003ACA17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87CEB40026302EDA003ACA17 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -196,7 +202,7 @@
 			path = NSExtensions;
 			sourceTree = "<group>";
 		};
-		871BE2BE26F1DE2E00647952 /* Banner */ = {
+		871BE2BE26F1DE2E00647952 /* 轮播图 */ = {
 			isa = PBXGroup;
 			children = (
 				871BE2C226F1EDE200647952 /* h1.jpg */,
@@ -208,7 +214,7 @@
 				871BE2BF26F1DE5200647952 /* BannerController.h */,
 				871BE2C026F1DE5200647952 /* BannerController.m */,
 			);
-			path = Banner;
+			path = "轮播图";
 			sourceTree = "<group>";
 		};
 		871BE2CA26F1EECA00647952 /* HQFlowView */ = {
@@ -252,6 +258,17 @@
 			path = "分类";
 			sourceTree = "<group>";
 		};
+		8756525D26F496730029C2E5 /* 点赞动画 */ = {
+			isa = PBXGroup;
+			children = (
+				8756525E26F496960029C2E5 /* DianZanController.h */,
+				8756525F26F496960029C2E5 /* DianZanController.m */,
+				8756526126F496D60029C2E5 /* AdmireAnimationView.h */,
+				8756526226F496D60029C2E5 /* AdmireAnimationView.m */,
+			);
+			path = "点赞动画";
+			sourceTree = "<group>";
+		};
 		87CEB3F326302EDA003ACA17 = {
 			isa = PBXGroup;
 			children = (
@@ -283,8 +300,9 @@
 				87CEB40326302EDA003ACA17 /* SceneDelegate.m */,
 				87CEB40526302EDA003ACA17 /* ViewController.h */,
 				87CEB40626302EDA003ACA17 /* ViewController.m */,
+				8756525D26F496730029C2E5 /* 点赞动画 */,
 				871BE2DE26F1F97F00647952 /* 分类 */,
-				871BE2BE26F1DE2E00647952 /* Banner */,
+				871BE2BE26F1DE2E00647952 /* 轮播图 */,
 				87CEB441263032E7003ACA17 /* BaseConfig */,
 				87CEB40826302EDA003ACA17 /* Main.storyboard */,
 				87CEB40B26302EDC003ACA17 /* Assets.xcassets */,
@@ -583,6 +601,7 @@
 				87CEB40726302EDA003ACA17 /* ViewController.m in Sources */,
 				87CEB468263032E7003ACA17 /* UILabel+Method.m in Sources */,
 				871BE2E126F1FA7E00647952 /* CategoryView1.m in Sources */,
+				8756526026F496960029C2E5 /* DianZanController.m in Sources */,
 				871BE2D926F1F10900647952 /* DSRHomeHeadPreview.m in Sources */,
 				87CEB46D263032E7003ACA17 /* UIFont+Method.m in Sources */,
 				871BE2BD26F1D98000647952 /* NSData+Encryption.m in Sources */,
@@ -602,6 +621,7 @@
 				871BE2E426F1FA8F00647952 /* CategoryView2.m in Sources */,
 				87CEB472263032E7003ACA17 /* UIBarButtonItem+Method.m in Sources */,
 				871BE2C126F1DE5200647952 /* BannerController.m in Sources */,
+				8756526326F496D60029C2E5 /* AdmireAnimationView.m in Sources */,
 				87CEB467263032E7003ACA17 /* UIImageView+Method.m in Sources */,
 				87CEB46B263032E7003ACA17 /* NSDate+Method.m in Sources */,
 			);

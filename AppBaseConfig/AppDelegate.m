@@ -16,6 +16,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //键盘
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    // 设置右上角文字
+    [IQKeyboardManager sharedManager].toolbarDoneBarButtonItemText = @"完成";
+    
     return YES;
 }
 
