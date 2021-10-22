@@ -107,7 +107,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mm_attibutedRangeString:(NSArray *)texts
                         colors:(NSArray *)colors
                          fonts:(NSArray *)fonts;
-
+/// 富文本
+/// @param subString 处理的文字串
+/// @param color 颜色
+/// @param fontSize 字体大小
+- (instancetype)mm_attibutedRangeString:(NSString *)subString
+                                  color:(UIColor *)color
+                               fontSize:(CGFloat)fontSize;
 @end
 
 NS_ASSUME_NONNULL_END

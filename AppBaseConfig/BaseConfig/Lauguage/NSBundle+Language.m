@@ -12,15 +12,17 @@ NSString* LocalizationString(NSString *key){
     //文件名 = 语言代码 + .lproj
     NSArray  *languages = [NSLocale preferredLanguages];
     NSString *language = [languages objectAtIndex:0]; //系统默认语言
-    if ([language containsString:@"th"]) {
-        language = @"th";
-    }else if ([language containsString:@"zh"]){
-        language = @"zh-Hans";
-    }else if ([language containsString:@"vi"]) {
-        language = @"vi";
-    }else{
-        language = @"vi";
-    }
+//    if ([language containsString:@"th"]) {
+//        language = @"th";
+//    }else if ([language containsString:@"zh"]){
+//        language = @"zh-Hans";
+//    }else if ([language containsString:@"vi"]) {
+//        language = @"vi";
+//    }else{
+//        language = @"vi";
+//    }
+    language = @"ja";
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:language ofType:@"lproj"];
     //获取对应语言的字符串
     // testText 文本的key

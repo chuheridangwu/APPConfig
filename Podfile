@@ -11,11 +11,14 @@ target 'AppBaseConfig' do
  pod 'Masonry'
  pod 'IQKeyboardManager'
  pod 'AFNetworking'
- pod 'SDWebImage'
  pod 'SDCycleScrollView'
  pod 'QMUIKit'
+ pod 'MJRefresh'
+ pod 'SDWebImage', '~> 5.9.5'
+ pod 'SDWebImageWebPCoder' # 加载webp
+ pod 'SDWebImageFLPlugin' # 加载GIF
  
-# pod 'MJRefresh'
+
 # pod 'FDFullscreenPopGesture'
 # pod 'BRPickerView'
 # pod 'CRBoxInputView'

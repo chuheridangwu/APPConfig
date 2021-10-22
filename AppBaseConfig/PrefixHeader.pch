@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  AppBaseConfig
+//
+//  Created by mlive on 2021/10/22.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <QMUIKit.h>
+#import "MacroHeader.h"
+
+#endif /* PrefixHeader_pch */

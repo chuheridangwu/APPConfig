@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)mm_deviceModel;
 
 /**
- 当前手机的操作系统的版本
+ 当前手机的操作系统的版本 比如 15.01
  @return 系统的版本
  */
 + (NSString *)mm_systemVersion;
@@ -95,6 +95,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)mm_UUID;
 
+// 获取设备名称 比如iPhone X
++ (NSString *)mm_deviceName;
 @end
 
 NS_ASSUME_NONNULL_END

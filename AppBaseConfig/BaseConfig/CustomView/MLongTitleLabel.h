@@ -3,7 +3,7 @@
 //  CategoryProject
 //
 //  Created by mlive on 2021/4/21.
-//
+// 滚动字符串
 
 #import <UIKit/UIKit.h>
 

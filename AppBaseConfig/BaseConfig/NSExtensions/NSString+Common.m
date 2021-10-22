@@ -104,6 +104,12 @@
     CFRelease(wifiInterfaces);
     return wifiName;
 }
+
+- (NSDictionary *)mm_jsonStringToDictionary{
+    NSData *JSONData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *responseJSON = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableLeaves error:nil];
+    return responseJSON;
+}
 @end
 
 #pragma mark -- 计算文字的宽高
@@ -538,6 +544,48 @@
     [formatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
     NSString* dateTime = [formatter stringFromDate:[NSDate date] ];
     return dateTime;
+}
+
+@end
+
+
+@implementation NSString (Method)
+
+- (NSMutableAttributedString*)mm_attibutedRangeString:(NSArray *)texts colors:(NSArray *)colors fonts:(NSArray *)fonts
+{
+    NSMutableAttributedString *contentStr = [[NSMutableAttributedString alloc] initWithString:self];
+
+    [texts enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSRange range = [contentStr.string rangeOfString:texts[idx]];
+        if (range.location != NSNotFound) {
+            if (colors && colors.count == texts.count) {
+                [contentStr addAttribute:NSForegroundColorAttributeName value:colors[idx] range:range];
+            }
+            if (fonts && fonts.count == texts.count) {
+                [contentStr addAttribute:NSFontAttributeName value:fonts[idx] range:range];
+            }
+        }
+    }];
+    
+    return contentStr;
+}
+
+- (NSMutableAttributedString*)mm_attibutedRangeString:(NSString *)subString color:(UIColor *)color fontSize:(CGFloat)fontSize{
+    NSMutableAttributedString *contentStr = [[NSMutableAttributedString alloc] initWithString:self];
+    
+    NSString *string1 = [self stringByAppendingString:subString];
+    NSString *temp;
+    for (int i = 0; i < self.length; i++) {
+        temp = [string1 substringWithRange:NSMakeRange(i, subString.length)];
+        if ([temp isEqualToString:subString]) {
+            NSRange range = {i,subString.length};
+            //修改特定字符的颜色
+            [contentStr addAttribute:NSForegroundColorAttributeName value:color range:range];
+            //修改特定字符的字体大小
+            [contentStr addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:fontSize] range:range];
+        }
+    }
+    return  contentStr;
 }
 
 @end

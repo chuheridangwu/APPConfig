@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (Method)
 
 // 获取顶层控制器
-+ (UIViewController *)currentViewController;
++ (UIViewController *)mm_currentViewController;
 @end
 
 NS_ASSUME_NONNULL_END

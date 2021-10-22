@@ -13,6 +13,7 @@
 #import "UIView+Frame.h"
 #import "MacroHeader.h"
 #import "AppPreviewView.h"
+#import "VideoController.h"
 
 typedef NS_ENUM(NSInteger,CellType) {
     CellType_Banner = 0,
@@ -33,7 +34,9 @@ typedef NS_ENUM(NSInteger,CellType) {
     self.dataSource = @[
         [Model initWithTitle:@"轮播图" name:@"BannerController"],
         [Model initWithTitle:@"首页分类item" name:@"CategoryController"],
-        [Model initWithTitle:@"直播间点赞动画" name:@"DianZanController"]
+        [Model initWithTitle:@"直播间点赞动画" name:@"DianZanController"],
+        [Model initWithTitle:@"录屏界面" name:@"VideoController"]
+
     ];
 
     [self.view addSubview:self.tableView];

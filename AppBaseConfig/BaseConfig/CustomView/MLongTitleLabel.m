@@ -6,7 +6,6 @@
 //
 
 #import "MLongTitleLabel.h"
-#import "UIView+Frame.h"
 
 @interface MLongTitleLabel ()
 @property (nonatomic,assign)CGFloat wateTime;

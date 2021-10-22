@@ -177,4 +177,15 @@
 
 }
 
+- (instancetype)mm_attibutedRangeString:(NSString *)subString color:(UIColor *)color fontSize:(CGFloat)fontSize{
+    NSMutableAttributedString *contentStr = [[NSMutableAttributedString alloc] init];
+    //找出特定字符在整个字符串中的位置
+    NSRange redRange = NSMakeRange([[self string] rangeOfString:subString].location, [[contentStr string] rangeOfString:subString].length);
+    //修改特定字符的颜色
+    [contentStr addAttribute:NSForegroundColorAttributeName value:color range:redRange];
+    //修改特定字符的字体大小
+    [contentStr addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:fontSize] range:redRange];
+    return  contentStr;
+}
+
 @end

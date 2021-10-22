@@ -9,7 +9,7 @@
 
 @implementation NSObject (Method)
 
-+ (UIViewController *)currentViewController
++ (UIViewController *)mm_currentViewController
 {
     UIViewController *result = nil;
     UIWindow * window = [[UIApplication sharedApplication] keyWindow];

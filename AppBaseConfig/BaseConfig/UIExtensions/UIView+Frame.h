@@ -43,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 切圆角
 - (void)mm_cutRounded:(CGFloat)size;
 
+/// 切某个角
+-(void)mm_cutRoundOnCorner:(UIRectCorner)rectCorner radius:(float)radius;
 
 /**
  * 添加渐变色

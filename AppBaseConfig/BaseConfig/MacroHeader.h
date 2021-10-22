@@ -10,6 +10,38 @@
 
 #ifdef __OBJC__
 
+// 第三方
+#import <MJRefresh.h>
+#import <Masonry.h>
+#import <SDWebImage.h>
+#import <IQKeyboardManager.h>
+#import <AFNetworkReachabilityManager.h>
+#import <AFHTTPSessionManager.h>
+#import "YYModel.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
+
+// 分类
+#import "NSMutableString+Method.h"
+#import "NSString+Common.h"
+#import "UIImageView+Method.h"
+#import "UIImage+Method.h"
+#import "UIButton+Method.h"
+#import "UILabel+Method.h"
+#import "UICollectionView+MExtension.h"
+#import "UIDevice+Method.h"
+#import "UIView+Frame.h"
+#import "NSDate+Method.h"
+#import "NSBundle+Language.h"
+#import "NSObject+Method.h"
+#import "NSDictionary+Method.h"
+#import "NSArray+Method.h"
+
+// 自定义View
+#import "MLongTitleLabel.h"
+#import "MLoadingView.h"
+#import "AppPreviewView.h"
+
+
 //屏幕bounds
 #define Screen_Bounds   [[UIScreen mainScreen] bounds]
 //屏幕size
@@ -21,12 +53,15 @@
 //屏幕比例
 #define ScreenWidthScale (Screen_Width/375.f)
 
+//状态栏高度
+#define WD_StatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+
 //齐刘海
 #define mm_Is_Iphone_Xm  (WD_StatusBarHeight>20)
 //底部高度
 #define mm_BottomMargin   ((WD_StatusBarHeight>20) ? 34 : 0)
 
-//屏幕适配 根据屏幕宽375 高667 来做适配的
+//屏幕适配 根据屏幕宽375   高667 来做适配的
 #define mm_Width_Fix(x)          (roundf((x)*ScreenWidthScale))
 #define mm_Height_Fix(x)         (roundf((x)*Screen_Height/667.0f))
 
@@ -49,7 +84,6 @@
 #define mm_PathTemp NSTemporaryDirectory()    //temp
 #define mm_PathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] //Document
 #define mm_PathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]  //Cache
-
 
 
 //16进制颜色

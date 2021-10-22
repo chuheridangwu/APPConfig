@@ -15,8 +15,19 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - Bugly (2.5.90)
+  - FLAnimatedImage (1.0.16)
   - IQKeyboardManager (6.5.6)
+  - libwebp (1.2.0):
+    - libwebp/demux (= 1.2.0)
+    - libwebp/mux (= 1.2.0)
+    - libwebp/webp (= 1.2.0)
+  - libwebp/demux (1.2.0):
+    - libwebp/webp
+  - libwebp/mux (1.2.0):
+    - libwebp/demux
+  - libwebp/webp (1.2.0)
   - Masonry (1.1.0)
+  - MJRefresh (3.7.2)
   - QMUIKit (4.2.3):
     - QMUIKit/QMUIComponents (= 4.2.3)
     - QMUIKit/QMUICore (= 4.2.3)
@@ -339,38 +350,57 @@ PODS:
   - QMUIKit/QMUIWeakObjectContainer (4.2.3)
   - SDCycleScrollView (1.82):
     - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.11.1):
-    - SDWebImage/Core (= 5.11.1)
-  - SDWebImage/Core (5.11.1)
+  - SDWebImage (5.9.5):
+    - SDWebImage/Core (= 5.9.5)
+  - SDWebImage/Core (5.9.5)
+  - SDWebImageFLPlugin (0.4.0):
+    - FLAnimatedImage (>= 1.0.11)
+    - SDWebImage/Core (~> 5.6)
+  - SDWebImageWebPCoder (0.6.1):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.7)
 
 DEPENDENCIES:
   - AFNetworking
   - Bugly
   - IQKeyboardManager
   - Masonry
+  - MJRefresh
   - QMUIKit
   - SDCycleScrollView
-  - SDWebImage
+  - SDWebImage (~> 5.9.5)
+  - SDWebImageFLPlugin
+  - SDWebImageWebPCoder
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - Bugly
+    - FLAnimatedImage
     - IQKeyboardManager
+    - libwebp
     - Masonry
+    - MJRefresh
     - QMUIKit
     - SDCycleScrollView
     - SDWebImage
+    - SDWebImageFLPlugin
+    - SDWebImageWebPCoder
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Bugly: 88bc32c0acc6fef7b74d610f0319ee7560d6b9fe
+  FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  libwebp: e90b9c01d99205d03b6bb8f2c8c415e5a4ef66f0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   QMUIKit: c047f987b14be9f48df47cb934a2d21ccd7ef4b6
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
-  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
+  SDWebImageFLPlugin: 6c2295fb1242d44467c6c87dc5db6b0a13228fd8
+  SDWebImageWebPCoder: d0dac55073088d24b2ac1b191a71a8f8d0adac21
 
-PODFILE CHECKSUM: c30f2907b7646804a37a5dff033244700274ffc2
+PODFILE CHECKSUM: 8cfeb0a138a5861e6adc8214180f1fd4bdf665f3
 
 COCOAPODS: 1.10.0

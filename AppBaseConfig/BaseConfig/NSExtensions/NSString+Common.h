@@ -30,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取 WIFI 名称
 - (NSString*)mm_wifiName;
+
+// 字符串转字典
+- (NSDictionary *)mm_jsonStringToDictionary;
 @end
 
 @interface NSString (Size)
@@ -173,4 +176,24 @@ NS_ASSUME_NONNULL_BEGIN
 /**当前时间*/
 +(NSString*)mm_currentTime;
 @end
+
+@interface NSString (Method)
+
+/// 富文本
+/// @param texts 处理的文字数组
+/// @param colors 颜色
+/// @param fonts 字体
+- (NSMutableAttributedString* )mm_attibutedRangeString:(NSArray *)texts
+                        colors:(NSArray *)colors
+                         fonts:(NSArray *)fonts;
+/// 富文本
+/// @param subString 处理的文字串
+/// @param color 颜色
+/// @param fontSize 字体大小
+- (NSMutableAttributedString* )mm_attibutedRangeString:(NSString *)subString
+                                  color:(UIColor *)color
+                               fontSize:(CGFloat)fontSize;
+@end
+
+
 NS_ASSUME_NONNULL_END
