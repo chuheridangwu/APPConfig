@@ -17,7 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**去掉左右(首尾) 空格、换行符*/
 - (NSString *)mm_trim;
+
 /**获取ip地址*/
++ (NSString *)mm_IPAddress;
 
 /*
  获取手机号邮箱加密
@@ -31,8 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取 WIFI 名称
 - (NSString*)mm_wifiName;
 
-// 字符串转字典
+/// 字符串转字典
 - (NSDictionary *)mm_jsonStringToDictionary;
+
 @end
 
 @interface NSString (Size)
@@ -177,7 +180,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSString*)mm_currentTime;
 @end
 
-@interface NSString (Method)
+@interface NSString (AttributedString)
 
 /// 富文本
 /// @param texts 处理的文字数组
@@ -195,5 +198,53 @@ NS_ASSUME_NONNULL_BEGIN
                                fontSize:(CGFloat)fontSize;
 @end
 
+
+#pragma mark -- 进制之间的转换
+@interface NSString (Base)
+
+/**
+ 十进制转换为二进制
+ @param decimal 十进制数;
+ @return 二进制数
+ */
++ (NSString *)mm_binaryByDecimal:(NSInteger)decimal;
+
+/**
+ 十进制转换十六进制
+  
+ @param decimal 十进制数
+ @return 十六进制数
+ */
++ (NSString *)mm_getHexByDecimal:(NSInteger)decimal;
+
+/**
+ 二进制转换成十六进制
+   
+ @param binary 二进制数
+ @return 十六进制数
+ */
++ (NSString *)getHexByBinary:(NSString *)binary;
+
+
+/**
+ 十六进制转换为二进制
+   
+ @param hex 十六进制数
+ @return 二进制数
+ */
++ (NSString *)getBinaryByHex:(NSString *)hex;
+
+
+/**
+ 二进制转换为十进制
+  
+ @param binary 二进制数
+ @return 十进制数
+ */
++ (NSInteger)getDecimalByBinary:(NSString *)binary;
+
+/// 字符串转成字节数据  比如字符串  @"0xA1" 转成 0xA1  data类型
+- (NSData *)mm_hexToBytes:(NSString *)string;
+@end
 
 NS_ASSUME_NONNULL_END
