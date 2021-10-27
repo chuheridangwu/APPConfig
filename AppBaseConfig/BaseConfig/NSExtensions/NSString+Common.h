@@ -243,8 +243,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSInteger)getDecimalByBinary:(NSString *)binary;
 
-/// 字符串转成字节数据  比如字符串  @"0xA1" 转成 0xA1  data类型
-- (NSData *)mm_hexToBytes:(NSString *)string;
+
+// 二进制字符串转成 char 类型0XA4  uint8_t cla = strtoul([@"A4" UTF8String],0,16);
+// 十六进制Data 数据转成 十六进制的字符串   比如 <00A40402> = @"00A40402"
+-(NSString *)mm_hexStringWithData:(NSData *)data;
+
+// 十六进制字符串 数据转成 十六进制的data数据   比如  @"00A40402" = <00A40402>
+- (NSData *)mm_hexToBytes:(NSString *)str;
 @end
 
 NS_ASSUME_NONNULL_END

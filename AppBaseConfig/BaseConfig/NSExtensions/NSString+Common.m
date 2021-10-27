@@ -771,12 +771,30 @@
     return decimal;
 }
 
-- (NSData *)mm_hexToBytes:(NSString *)string{
+// 十六进制Data 数据转成 十六进制的字符串   比如 <00A40402> = @"00A40402"
+-(NSString *)mm_hexStringWithData:(NSData *)data{
+    Byte *bytes = (Byte *)[data bytes];
+    NSString *hexStr=@"";
+    for(int i=0;i<[data length];i++) {
+        NSString *newHexStr = [NSString stringWithFormat:@"%x",bytes[i]&0xff];///16进制数
+        if([newHexStr length]==1){
+            hexStr = [NSString stringWithFormat:@"%@0%@",hexStr,newHexStr];
+        }
+        else{
+            hexStr = [NSString stringWithFormat:@"%@%@",hexStr,newHexStr];
+        }
+    }
+    hexStr = [hexStr uppercaseString];
+    return hexStr;
+}
+
+// 十六进制字符串 数据转成 十六进制的data数据   比如  @"00A40402" = <00A40402>
+- (NSData *)mm_hexToBytes:(NSString *)str{
     NSMutableData* data = [NSMutableData data];
     int idx;
-    for (idx = 0; idx+2 <= string.length; idx+=2) {
+    for (idx = 0; idx+2 <= str.length; idx+=2) {
         NSRange range = NSMakeRange(idx, 2);
-        NSString* hexStr = [string substringWithRange:range];
+        NSString* hexStr = [str substringWithRange:range];
         NSScanner* scanner = [NSScanner scannerWithString:hexStr];
         unsigned int intValue;
         [scanner scanHexInt:&intValue];
