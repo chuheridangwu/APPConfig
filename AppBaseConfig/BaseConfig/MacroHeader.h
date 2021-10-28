@@ -11,13 +11,13 @@
 #ifdef __OBJC__
 
 // 第三方
+#import "YYModel.h"
 #import <MJRefresh.h>
 #import <Masonry.h>
 #import <SDWebImage.h>
 #import <IQKeyboardManager.h>
 #import <AFNetworkReachabilityManager.h>
 #import <AFHTTPSessionManager.h>
-#import "YYModel.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
 
 // 分类

@@ -72,6 +72,7 @@
 		8781C0C92722C79C00B5C049 /* AppPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781C0942722C79B00B5C049 /* AppPreviewView.m */; };
 		8781C0CA2722C79C00B5C049 /* MLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781C0962722C79B00B5C049 /* MLoadingView.m */; };
 		8781C0CB2722C79C00B5C049 /* MLongTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781C0982722C79B00B5C049 /* MLongTitleLabel.m */; };
+		87917FA42729503D006CDB8C /* MModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 87917FA32729503D006CDB8C /* MModelTool.m */; };
 		87CEB40126302EDA003ACA17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40026302EDA003ACA17 /* AppDelegate.m */; };
 		87CEB40426302EDA003ACA17 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40326302EDA003ACA17 /* SceneDelegate.m */; };
 		87CEB40726302EDA003ACA17 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40626302EDA003ACA17 /* ViewController.m */; };
@@ -234,6 +235,8 @@
 		8781C0982722C79B00B5C049 /* MLongTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLongTitleLabel.m; sourceTree = "<group>"; };
 		8781C0992722C79B00B5C049 /* MacroHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
 		8781C0CC2722CAB500B5C049 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		87917FA22729503D006CDB8C /* MModelTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MModelTool.h; sourceTree = "<group>"; };
+		87917FA32729503D006CDB8C /* MModelTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MModelTool.m; sourceTree = "<group>"; };
 		87CEB3FC26302EDA003ACA17 /* AppBaseConfig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBaseConfig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CEB3FF26302EDA003ACA17 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87CEB40026302EDA003ACA17 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -347,6 +350,7 @@
 		8781C0262722C79B00B5C049 /* BaseConfig */ = {
 			isa = PBXGroup;
 			children = (
+				87917F9E2729500F006CDB8C /* Model */,
 				8781C0272722C79B00B5C049 /* SSKeychain */,
 				8781C02A2722C79B00B5C049 /* NSExtensions */,
 				8781C03B2722C79B00B5C049 /* Library */,
@@ -562,6 +566,15 @@
 				8781C0982722C79B00B5C049 /* MLongTitleLabel.m */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		87917F9E2729500F006CDB8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87917FA22729503D006CDB8C /* MModelTool.h */,
+				87917FA32729503D006CDB8C /* MModelTool.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		87CEB3F326302EDA003ACA17 = {
@@ -892,6 +905,7 @@
 				8781C0A82722C79C00B5C049 /* YYClassInfo.m in Sources */,
 				8781C0BE2722C79C00B5C049 /* UIView+Frame.m in Sources */,
 				8781C0A72722C79C00B5C049 /* NSObject+YYModel.m in Sources */,
+				87917FA42729503D006CDB8C /* MModelTool.m in Sources */,
 				87CEB41226302EDC003ACA17 /* main.m in Sources */,
 				8781C0C12722C79C00B5C049 /* UIDevice+Method.m in Sources */,
 				8781C0C42722C79C00B5C049 /* ItemsCollectionViewCell.m in Sources */,
