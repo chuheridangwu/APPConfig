@@ -82,6 +82,7 @@
 		87CEB41226302EDC003ACA17 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB41126302EDC003ACA17 /* main.m */; };
 		87CEB41C26302EDC003ACA17 /* AppBaseConfigTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB41B26302EDC003ACA17 /* AppBaseConfigTests.m */; };
 		87CEB42726302EDC003ACA17 /* AppBaseConfigUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB42626302EDC003ACA17 /* AppBaseConfigUITests.m */; };
+		87F69A9E272B9BD6007AE3FF /* ContactsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F69A9D272B9BD6007AE3FF /* ContactsTool.m */; };
 		87FB8D39271D3FD70082BD03 /* WCLRecordProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FB8D38271D3FD60082BD03 /* WCLRecordProgressView.m */; };
 		87FF6F93271D3CBC008649C9 /* WCLRecordEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FF6F8F271D3CBC008649C9 /* WCLRecordEngine.m */; };
 		87FF6F94271D3CBC008649C9 /* WCLRecordEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FF6F92271D3CBC008649C9 /* WCLRecordEncoder.m */; };
@@ -255,6 +256,8 @@
 		87CEB42226302EDC003ACA17 /* AppBaseConfigUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppBaseConfigUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CEB42626302EDC003ACA17 /* AppBaseConfigUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppBaseConfigUITests.m; sourceTree = "<group>"; };
 		87CEB42826302EDC003ACA17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F69A9C272B9BD6007AE3FF /* ContactsTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTool.h; sourceTree = "<group>"; };
+		87F69A9D272B9BD6007AE3FF /* ContactsTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTool.m; sourceTree = "<group>"; };
 		87FB8D37271D3FD60082BD03 /* WCLRecordProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLRecordProgressView.h; sourceTree = "<group>"; };
 		87FB8D38271D3FD60082BD03 /* WCLRecordProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLRecordProgressView.m; sourceTree = "<group>"; };
 		87FF6F8E271D3CBC008649C9 /* WCLRecordEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLRecordEngine.h; sourceTree = "<group>"; };
@@ -350,6 +353,7 @@
 		8781C0262722C79B00B5C049 /* BaseConfig */ = {
 			isa = PBXGroup;
 			children = (
+				87F69A9B272B9B74007AE3FF /* Authority */,
 				87917F9E2729500F006CDB8C /* Model */,
 				8781C0272722C79B00B5C049 /* SSKeychain */,
 				8781C02A2722C79B00B5C049 /* NSExtensions */,
@@ -639,6 +643,15 @@
 				87CEB42826302EDC003ACA17 /* Info.plist */,
 			);
 			path = AppBaseConfigUITests;
+			sourceTree = "<group>";
+		};
+		87F69A9B272B9B74007AE3FF /* Authority */ = {
+			isa = PBXGroup;
+			children = (
+				87F69A9C272B9BD6007AE3FF /* ContactsTool.h */,
+				87F69A9D272B9BD6007AE3FF /* ContactsTool.m */,
+			);
+			path = Authority;
 			sourceTree = "<group>";
 		};
 		87FB8D36271D3FD60082BD03 /* WCLRecordProgressView */ = {
@@ -943,6 +956,7 @@
 				8781C0A52722C79B00B5C049 /* HQImagePageControl.m in Sources */,
 				8781C0A42722C79B00B5C049 /* HQIndexBannerSubview.m in Sources */,
 				8781C09F2722C79B00B5C049 /* NSString+Common.m in Sources */,
+				87F69A9E272B9BD6007AE3FF /* ContactsTool.m in Sources */,
 				8781C0AD2722C79C00B5C049 /* YYMemoryCache.m in Sources */,
 				8781C0BA2722C79C00B5C049 /* YYWebImageOperation.m in Sources */,
 				8781C09B2722C79B00B5C049 /* NSDictionary+Method.m in Sources */,

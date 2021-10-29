@@ -18,7 +18,7 @@
 #import <IQKeyboardManager.h>
 #import <AFNetworkReachabilityManager.h>
 #import <AFHTTPSessionManager.h>
-#import "UINavigationController+FDFullscreenPopGesture.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"  // 侧滑
 
 // 分类
 #import "NSMutableString+Method.h"
@@ -35,6 +35,9 @@
 #import "NSObject+Method.h"
 #import "NSDictionary+Method.h"
 #import "NSArray+Method.h"
+
+// 权限相关的工具类
+#import "ContactsTool.h"
 
 // 自定义View
 #import "MLongTitleLabel.h"
