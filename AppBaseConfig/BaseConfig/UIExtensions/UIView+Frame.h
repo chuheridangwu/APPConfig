@@ -102,6 +102,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIImage *)mm_createBarCode:(NSString *)inputMessage
                                        width:(CGFloat)width
                                       height:(CGFloat)height;
+/** 将当前View转换成Image */
+- (UIImage *)mm_createImage;
+
 @end
 
 #pragma mark --- 添加手势

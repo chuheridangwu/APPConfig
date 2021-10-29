@@ -424,6 +424,18 @@
      UIImage *returnImage = [UIImage imageWithCIImage:ciImage];
      return returnImage;
 }
+
+/** 将当前View转换成Image */
+- (UIImage *)mm_createImage{
+    
+    UIGraphicsImageRendererFormat *format = [[UIGraphicsImageRendererFormat alloc] init];
+       format.prefersExtendedRange = YES;
+       UIGraphicsImageRenderer *renderer = [[UIGraphicsImageRenderer alloc] initWithSize:self.size format:format];
+    UIImage *tmpImage = [renderer imageWithActions:^(UIGraphicsImageRendererContext * _Nonnull rendererContext) {
+           return [self.layer renderInContext:rendererContext.CGContext];
+    }];
+    return  tmpImage;
+}
 @end
 
 
