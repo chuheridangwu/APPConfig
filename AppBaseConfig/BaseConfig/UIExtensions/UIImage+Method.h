@@ -128,6 +128,11 @@ typedef void(^DataBlock)(NSData  *resultData);
  */
 + (UIImage *)mm_newSizeImage:(CGSize)size image:(UIImage *)source_image;
 
+/**
+ 压缩或拉伸图片到指定大小
+ @return 处理后的图片
+ */
+-(UIImage *)mm_imageResizedWith:(CGSize)size;
 
 /**
  根据颜色生成一张图片，默认 1x1 大小
@@ -140,11 +145,9 @@ typedef void(^DataBlock)(NSData  *resultData);
 
 // 按图片的大小 智能压缩
 - (NSData *)mm_smartCompressedImage;
+
 // 缩略图
 - (UIImage *)mm_thumbnailImage;
-
-- (NSInteger)length;
-
 
 /// layer转img
 /// @param layer layer
@@ -155,8 +158,7 @@ typedef void(^DataBlock)(NSData  *resultData);
  @return 处理后的
  */
 -(UIImage *)mm_imageConvertedToColor:(UIColor*)color;
--(UIImage*)mm_imageConvertedToColor:(UIColor*)color alpha:(CGFloat)alpha;
--(UIImage *)mm_imageResizedWith:(CGSize)size;
+-(UIImage *)mm_imageConvertedToColor:(UIColor*)color alpha:(CGFloat)alpha;
 
 
 /**

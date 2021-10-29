@@ -676,12 +676,6 @@
     return [UIImage imageWithData:data];
 }
 
-
--(NSInteger)length
-{
-    return 0;
-}
-
 //绘图
 -(UIImage*)mm_imageConvertedToColor:(UIColor*)color
 {

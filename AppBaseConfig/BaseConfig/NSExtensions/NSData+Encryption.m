@@ -8,10 +8,12 @@
 #import "NSData+Encryption.h"
 
 #import <CommonCrypto/CommonCryptor.h>
+
 #define RSA_KEY_BASE64 @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgSVx9ny4+OfS+6ak/l3YtPIT1 \
 k0KVHUoTkHn06VxcvlQNwLmZpiZGaqlTCl5Im2fyFbUlnnts4IgsWEhY9GZPtjM5 \
 1rrFEEef7ZS1PEHMxomyAsRnDXt06ok/9Cc9pY0xAJGk70mgIaebrIw0pMXG5Q40 \
 HI4T94Oq5VemM6BeHQIDAQAB"
+
 const char ivBytes[] =
 {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00

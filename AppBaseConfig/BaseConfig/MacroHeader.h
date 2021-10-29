@@ -21,20 +21,25 @@
 #import "UINavigationController+FDFullscreenPopGesture.h"  // 侧滑
 
 // 分类
-#import "NSMutableString+Method.h"
-#import "NSString+Common.h"
+#import "UITableView+Extension.h"
+#import "UICollectionView+MExtension.h"
 #import "UIImageView+Method.h"
 #import "UIImage+Method.h"
 #import "UIButton+Method.h"
 #import "UILabel+Method.h"
-#import "UICollectionView+MExtension.h"
 #import "UIDevice+Method.h"
 #import "UIView+Frame.h"
+#import "UIFont+Method.h"
+#import "UIBarButtonItem+Method.h"
+
+#import "NSData+Encryption.h"
 #import "NSDate+Method.h"
 #import "NSBundle+Language.h"
 #import "NSObject+Method.h"
 #import "NSDictionary+Method.h"
 #import "NSArray+Method.h"
+#import "NSMutableString+Method.h"
+#import "NSString+Common.h"
 
 // 权限相关的工具类
 #import "ContactsTool.h"

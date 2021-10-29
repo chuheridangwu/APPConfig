@@ -83,6 +83,7 @@
 		87CEB41C26302EDC003ACA17 /* AppBaseConfigTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB41B26302EDC003ACA17 /* AppBaseConfigTests.m */; };
 		87CEB42726302EDC003ACA17 /* AppBaseConfigUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB42626302EDC003ACA17 /* AppBaseConfigUITests.m */; };
 		87F69A9E272B9BD6007AE3FF /* ContactsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F69A9D272B9BD6007AE3FF /* ContactsTool.m */; };
+		87F69AA1272BC579007AE3FF /* UITableView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F69AA0272BC579007AE3FF /* UITableView+Extension.m */; };
 		87FB8D39271D3FD70082BD03 /* WCLRecordProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FB8D38271D3FD60082BD03 /* WCLRecordProgressView.m */; };
 		87FF6F93271D3CBC008649C9 /* WCLRecordEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FF6F8F271D3CBC008649C9 /* WCLRecordEngine.m */; };
 		87FF6F94271D3CBC008649C9 /* WCLRecordEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FF6F92271D3CBC008649C9 /* WCLRecordEncoder.m */; };
@@ -258,6 +259,8 @@
 		87CEB42826302EDC003ACA17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87F69A9C272B9BD6007AE3FF /* ContactsTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsTool.h; sourceTree = "<group>"; };
 		87F69A9D272B9BD6007AE3FF /* ContactsTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTool.m; sourceTree = "<group>"; };
+		87F69A9F272BC579007AE3FF /* UITableView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Extension.h"; sourceTree = "<group>"; };
+		87F69AA0272BC579007AE3FF /* UITableView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Extension.m"; sourceTree = "<group>"; };
 		87FB8D37271D3FD60082BD03 /* WCLRecordProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLRecordProgressView.h; sourceTree = "<group>"; };
 		87FB8D38271D3FD60082BD03 /* WCLRecordProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLRecordProgressView.m; sourceTree = "<group>"; };
 		87FF6F8E271D3CBC008649C9 /* WCLRecordEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLRecordEngine.h; sourceTree = "<group>"; };
@@ -521,6 +524,8 @@
 				8781C0802722C79B00B5C049 /* UIButton+Method.m */,
 				8781C07E2722C79B00B5C049 /* UICollectionView+MExtension.h */,
 				8781C0862722C79B00B5C049 /* UICollectionView+MExtension.m */,
+				87F69A9F272BC579007AE3FF /* UITableView+Extension.h */,
+				87F69AA0272BC579007AE3FF /* UITableView+Extension.m */,
 				8781C07B2722C79B00B5C049 /* UIDevice+Method.h */,
 				8781C0812722C79B00B5C049 /* UIDevice+Method.m */,
 				8781C0772722C79B00B5C049 /* UIFont+Method.h */,
@@ -908,6 +913,7 @@
 				871BE2D926F1F10900647952 /* DSRHomeHeadPreview.m in Sources */,
 				87FF6F93271D3CBC008649C9 /* WCLRecordEngine.m in Sources */,
 				87FB8D39271D3FD70082BD03 /* WCLRecordProgressView.m in Sources */,
+				87F69AA1272BC579007AE3FF /* UITableView+Extension.m in Sources */,
 				87FF6F94271D3CBC008649C9 /* WCLRecordEncoder.m in Sources */,
 				8781C0B72722C79C00B5C049 /* MKAnnotationView+YYWebImage.m in Sources */,
 				871BE2E726F1FAC600647952 /* CategoryModel.m in Sources */,
