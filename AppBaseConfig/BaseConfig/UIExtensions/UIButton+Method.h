@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <objc/runtime.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param title 文字
  @param color 文字颜色
  @param font  字体大小
- @param block  事件
+ @param block  事件，注意循环引用问题
  @return 一个按钮
  */
 + (instancetype)mm_createBtnWithTitle:(NSString *)title
@@ -41,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param title 文字
  @param normalColor 文字颜色
  @param fontSize  字体大小
- @param block  事件
+ @param block  事件 ，注意循环引用问题
  @return 一个按钮
  */
 + (UIButton *)mm_createButton:(CGFloat)fontSize
@@ -197,5 +198,16 @@ typedef NS_ENUM(NSInteger, SSMarginType) {
 
 @end
 
+
+#pragma mark --- UIButton 添加Block回调
+
+typedef void(^UIButtonBlock)(UIButton *sender);
+@interface UIButton (UIButtonBlock)
+
+@property (nonatomic,copy)UIButtonBlock buttonBlock;
+
+- (void)mm_setTapBlock:(UIButtonBlock)block;
+
+@end
 
 NS_ASSUME_NONNULL_END

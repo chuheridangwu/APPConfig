@@ -33,9 +33,10 @@
 
     if (block) {
         
-        [view setQmui_tapBlock:^(__kindof UIControl *sender) {
+        [view  mm_setTapBlock:^(UIButton * _Nonnull sender) {
             !block ?: block(sender);
         }];
+        
     }
     
     return view;
@@ -314,6 +315,32 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
         self.titleEdgeInsets = edgeInsets;
     } else {
         self.imageEdgeInsets = edgeInsets;
+    }
+}
+@end
+
+
+#pragma mark --- UIButton 添加Block回调
+static void *UIButtonBlockKey =  &UIButtonBlockKey;
+
+@implementation UIButton(UIButtonBlock)
+
+- (UIButtonBlock)buttonBlock{
+    return objc_getAssociatedObject(self, &UIButtonBlockKey);
+}
+
+- (void)setButtonBlock:(UIButtonBlock)buttonBlock{
+    objc_setAssociatedObject(self, &UIButtonBlockKey, buttonBlock, OBJC_ASSOCIATION_COPY);
+}
+
+- (void)mm_setTapBlock:(UIButtonBlock)block{
+    self.buttonBlock = block;
+    [self addTarget:self action:@selector(mm_clickButtonBlock:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)mm_clickButtonBlock:(UIButton*)btn{
+    if (self.buttonBlock) {
+        self.buttonBlock(btn);
     }
 }
 @end
