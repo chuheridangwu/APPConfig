@@ -443,15 +443,15 @@
 		8781C04C2722C79B00B5C049 /* YYWebImage */ = {
 			isa = PBXGroup;
 			children = (
-				8781C04D2722C79B00B5C049 /* YYImageCache.m */,
 				8781C04E2722C79B00B5C049 /* Cache */,
-				8781C0572722C79B00B5C049 /* YYWebImageManager.m */,
-				8781C0582722C79B00B5C049 /* YYWebImageOperation.h */,
+				8781C0662722C79B00B5C049 /* Categories */,
 				8781C0592722C79B00B5C049 /* Image */,
 				8781C0642722C79B00B5C049 /* YYImageCache.h */,
-				8781C0652722C79B00B5C049 /* YYWebImageManager.h */,
-				8781C0662722C79B00B5C049 /* Categories */,
+				8781C04D2722C79B00B5C049 /* YYImageCache.m */,
 				8781C0732722C79B00B5C049 /* YYWebImage.h */,
+				8781C0652722C79B00B5C049 /* YYWebImageManager.h */,
+				8781C0572722C79B00B5C049 /* YYWebImageManager.m */,
+				8781C0582722C79B00B5C049 /* YYWebImageOperation.h */,
 				8781C0742722C79B00B5C049 /* YYWebImageOperation.m */,
 			);
 			path = YYWebImage;
@@ -460,13 +460,13 @@
 		8781C04E2722C79B00B5C049 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
+				8781C0542722C79B00B5C049 /* YYCache.h */,
+				8781C0512722C79B00B5C049 /* YYCache.m */,
+				8781C0532722C79B00B5C049 /* YYDiskCache.h */,
 				8781C04F2722C79B00B5C049 /* YYDiskCache.m */,
 				8781C0502722C79B00B5C049 /* YYKVStorage.h */,
-				8781C0512722C79B00B5C049 /* YYCache.m */,
-				8781C0522722C79B00B5C049 /* YYMemoryCache.h */,
-				8781C0532722C79B00B5C049 /* YYDiskCache.h */,
-				8781C0542722C79B00B5C049 /* YYCache.h */,
 				8781C0552722C79B00B5C049 /* YYKVStorage.m */,
+				8781C0522722C79B00B5C049 /* YYMemoryCache.h */,
 				8781C0562722C79B00B5C049 /* YYMemoryCache.m */,
 			);
 			path = Cache;
@@ -475,16 +475,16 @@
 		8781C0592722C79B00B5C049 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				8781C05A2722C79B00B5C049 /* YYImage.h */,
-				8781C05B2722C79B00B5C049 /* YYImageCoder.h */,
-				8781C05C2722C79B00B5C049 /* YYFrameImage.h */,
-				8781C05D2722C79B00B5C049 /* YYSpriteSheetImage.m */,
 				8781C05E2722C79B00B5C049 /* YYAnimatedImageView.h */,
-				8781C05F2722C79B00B5C049 /* YYImage.m */,
-				8781C0602722C79B00B5C049 /* YYImageCoder.m */,
-				8781C0612722C79B00B5C049 /* YYFrameImage.m */,
 				8781C0622722C79B00B5C049 /* YYAnimatedImageView.m */,
+				8781C05C2722C79B00B5C049 /* YYFrameImage.h */,
+				8781C0612722C79B00B5C049 /* YYFrameImage.m */,
+				8781C05A2722C79B00B5C049 /* YYImage.h */,
+				8781C05F2722C79B00B5C049 /* YYImage.m */,
+				8781C05B2722C79B00B5C049 /* YYImageCoder.h */,
+				8781C0602722C79B00B5C049 /* YYImageCoder.m */,
 				8781C0632722C79B00B5C049 /* YYSpriteSheetImage.h */,
+				8781C05D2722C79B00B5C049 /* YYSpriteSheetImage.m */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -492,18 +492,18 @@
 		8781C0662722C79B00B5C049 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				8781C0672722C79B00B5C049 /* _YYWebImageSetter.m */,
-				8781C0682722C79B00B5C049 /* UIButton+YYWebImage.h */,
-				8781C0692722C79B00B5C049 /* UIImageView+YYWebImage.h */,
-				8781C06A2722C79B00B5C049 /* CALayer+YYWebImage.h */,
-				8781C06B2722C79B00B5C049 /* UIImage+YYWebImage.h */,
-				8781C06C2722C79B00B5C049 /* MKAnnotationView+YYWebImage.h */,
 				8781C06D2722C79B00B5C049 /* _YYWebImageSetter.h */,
-				8781C06E2722C79B00B5C049 /* UIButton+YYWebImage.m */,
-				8781C06F2722C79B00B5C049 /* UIImageView+YYWebImage.m */,
-				8781C0702722C79B00B5C049 /* MKAnnotationView+YYWebImage.m */,
-				8781C0712722C79B00B5C049 /* UIImage+YYWebImage.m */,
+				8781C0672722C79B00B5C049 /* _YYWebImageSetter.m */,
+				8781C06A2722C79B00B5C049 /* CALayer+YYWebImage.h */,
 				8781C0722722C79B00B5C049 /* CALayer+YYWebImage.m */,
+				8781C06C2722C79B00B5C049 /* MKAnnotationView+YYWebImage.h */,
+				8781C0702722C79B00B5C049 /* MKAnnotationView+YYWebImage.m */,
+				8781C0682722C79B00B5C049 /* UIButton+YYWebImage.h */,
+				8781C06E2722C79B00B5C049 /* UIButton+YYWebImage.m */,
+				8781C06B2722C79B00B5C049 /* UIImage+YYWebImage.h */,
+				8781C0712722C79B00B5C049 /* UIImage+YYWebImage.m */,
+				8781C0692722C79B00B5C049 /* UIImageView+YYWebImage.h */,
+				8781C06F2722C79B00B5C049 /* UIImageView+YYWebImage.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -536,11 +536,11 @@
 		8781C0882722C79B00B5C049 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				8781C0892722C79B00B5C049 /* ListCollectionViewCell.h */,
+				8781C08D2722C79B00B5C049 /* ItemsCollectionViewCell.h */,
 				8781C08A2722C79B00B5C049 /* ItemsCollectionViewCell.m */,
 				8781C08B2722C79B00B5C049 /* ItemsCollectionViewCell.xib */,
+				8781C0892722C79B00B5C049 /* ListCollectionViewCell.h */,
 				8781C08C2722C79B00B5C049 /* ListCollectionViewCell.m */,
-				8781C08D2722C79B00B5C049 /* ItemsCollectionViewCell.h */,
 				8781C08E2722C79B00B5C049 /* ListCollectionViewCell.xib */,
 			);
 			path = Cell;
@@ -549,8 +549,8 @@
 		8781C08F2722C79B00B5C049 /* Lauguage */ = {
 			isa = PBXGroup;
 			children = (
-				8781C0902722C79B00B5C049 /* NSBundle+Language.m */,
 				8781C0912722C79B00B5C049 /* NSBundle+Language.h */,
+				8781C0902722C79B00B5C049 /* NSBundle+Language.m */,
 			);
 			path = Lauguage;
 			sourceTree = "<group>";

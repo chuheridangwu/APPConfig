@@ -96,7 +96,7 @@ static NSString *kAppLanguageKey = @"KJ_CURRENT_LANGUAGE_KEY";
 {
     objc_setAssociatedObject(self, @selector(LocalizedKey), LocalizedKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (LocalizedKey == nil) return;
-    self.text = kLocalizationString(LocalizedKey);
+    self.text = XLa(LocalizedKey);
 }
 
 @end
@@ -110,9 +110,9 @@ static NSString *kAppLanguageKey = @"KJ_CURRENT_LANGUAGE_KEY";
     objc_setAssociatedObject(self, @selector(LocalizedKey), LocalizedKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (LocalizedKey == nil) return;
     if (NSBundle.customStringsName) {
-        self.placeholder = kLocalizationString(LocalizedKey);
+        self.placeholder = XLa(LocalizedKey);
     }else{
-        self.placeholder = kLocalizationString(LocalizedKey);
+        self.placeholder = XLa(LocalizedKey);
     }
 }
 
@@ -127,9 +127,9 @@ static NSString *kAppLanguageKey = @"KJ_CURRENT_LANGUAGE_KEY";
     objc_setAssociatedObject(self, @selector(LocalizedKey), LocalizedKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (LocalizedKey == nil) return;
     if (NSBundle.customStringsName) {
-        [self setTitle:kLocalizationString(LocalizedKey) forState:UIControlStateNormal];
+        [self setTitle:XLa(LocalizedKey) forState:UIControlStateNormal];
     }else{
-        [self setTitle:kLocalizationString(LocalizedKey) forState:UIControlStateNormal];
+        [self setTitle:XLa(LocalizedKey) forState:UIControlStateNormal];
     }
 }
 - (NSString*)HighlightedKey{
@@ -139,9 +139,9 @@ static NSString *kAppLanguageKey = @"KJ_CURRENT_LANGUAGE_KEY";
     objc_setAssociatedObject(self, @selector(HighlightedKey), HighlightedKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (HighlightedKey == nil) return;
     if (NSBundle.customStringsName) {
-        [self setTitle:kLocalizationString(HighlightedKey) forState:UIControlStateHighlighted];
+        [self setTitle:XLa(HighlightedKey) forState:UIControlStateHighlighted];
     }else{
-        [self setTitle:kLocalizationString(HighlightedKey) forState:UIControlStateHighlighted];
+        [self setTitle:XLa(HighlightedKey) forState:UIControlStateHighlighted];
     }
 }
 - (NSString*)SelectedKey{
@@ -151,9 +151,9 @@ static NSString *kAppLanguageKey = @"KJ_CURRENT_LANGUAGE_KEY";
     objc_setAssociatedObject(self, @selector(SelectedKey), SelectedKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (SelectedKey == nil) return;
     if (NSBundle.customStringsName) {
-        [self setTitle:kLocalizationString(SelectedKey) forState:UIControlStateSelected];
+        [self setTitle:XLa(SelectedKey) forState:UIControlStateSelected];
     }else{
-        [self setTitle:kLocalizationString(SelectedKey) forState:UIControlStateSelected];
+        [self setTitle:XLa(SelectedKey) forState:UIControlStateSelected];
     }
 }
 - (NSString*)DisabledKey{
@@ -163,9 +163,9 @@ static NSString *kAppLanguageKey = @"KJ_CURRENT_LANGUAGE_KEY";
     objc_setAssociatedObject(self, @selector(DisabledKey), DisabledKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if (DisabledKey == nil) return;
     if (NSBundle.customStringsName) {
-        [self setTitle:kLocalizationString(DisabledKey) forState:UIControlStateDisabled];
+        [self setTitle:XLa(DisabledKey) forState:UIControlStateDisabled];
     }else{
-        [self setTitle:kLocalizationString(DisabledKey) forState:UIControlStateDisabled];
+        [self setTitle:XLa(DisabledKey) forState:UIControlStateDisabled];
     }
 }
 @end

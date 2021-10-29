@@ -54,12 +54,12 @@
 #define ScreenWidthScale (Screen_Width/375.f)
 
 //状态栏高度
-#define WD_StatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define mm_StatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 
 //齐刘海
-#define mm_Is_Iphone_Xm  (WD_StatusBarHeight>20)
+#define mm_Is_Iphone_Xm  (mm_StatusBarHeight>20)
 //底部高度
-#define mm_BottomMargin   ((WD_StatusBarHeight>20) ? 34 : 0)
+#define mm_BottomMargin   ((mm_StatusBarHeight>20) ? 34 : 0)
 
 //屏幕适配 根据屏幕宽375   高667 来做适配的
 #define mm_Width_Fix(x)          (roundf((x)*ScreenWidthScale))
@@ -110,3 +110,18 @@
 #endif /* __OBJC__ */
 
 #endif /* MacroHeader_h */
+
+
+/**
+ 
+ // 宏定义 只显示打印信息，不显示日期
+ #ifdef DEBUG
+ #define NSLog(FORMAT, ...) fprintf(stderr,"%s\n",[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+ #else
+ #define NSLog(...)
+ #endif
+ 
+ 
+ 
+ 
+ */

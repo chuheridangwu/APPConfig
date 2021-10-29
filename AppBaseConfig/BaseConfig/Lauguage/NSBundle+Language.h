@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define kLocalizationString(key) LocalizationString(key)
+#define XLa(key) LocalizationString(key)
 NSString* LocalizationString(NSString *key);
 
 @interface NSBundle (Language)
