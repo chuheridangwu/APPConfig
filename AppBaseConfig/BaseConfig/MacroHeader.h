@@ -43,6 +43,7 @@
 
 // 权限相关的工具类
 #import "ContactsTool.h"
+#import "CameraPhotoTool.h"
 
 // 自定义View
 #import "MLongTitleLabel.h"

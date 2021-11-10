@@ -17,6 +17,7 @@
 #import "MacroHeader.h"
 #import "AppPreviewView.h"
 #import "VideoController.h"
+#import "HeaderController.h"
 
 typedef NS_ENUM(NSInteger,CellType) {
     CellType_Banner = 0,
@@ -33,13 +34,14 @@ typedef NS_ENUM(NSInteger,CellType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.title = @"示例Demo";
     
     self.dataSource = @[
         [Model initWithTitle:@"轮播图" name:@"BannerController"],
         [Model initWithTitle:@"首页分类item" name:@"CategoryController"],
         [Model initWithTitle:@"直播间点赞动画" name:@"DianZanController"],
-        [Model initWithTitle:@"录屏界面" name:@"VideoController"]
-
+        [Model initWithTitle:@"录屏界面" name:@"VideoController"],
+        [Model initWithTitle:@"编辑头像" name:@"HeaderController"]
     ];
 
     [self.view addSubview:self.tableView];
@@ -67,7 +69,7 @@ static NSString *identifier = @"UITableViewCell";
 
 - (UITableView *)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height - 100)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];

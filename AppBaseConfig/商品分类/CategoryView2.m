@@ -61,8 +61,7 @@
         
         UIImage *place = [[UIImage imageNamed:model] qmui_imageResizedInLimitedSize:mm_size(44, 44)];
         [item setImage:place forState:UIControlStateNormal];
-        [item setImagePosition:QMUIButtonImagePositionTop];
-        item.spacingBetweenImageAndTitle = mm_Width_Fix(5);
+        [item mm_setImagePositionWithType:ButtonEdgeInsetsStyleTop spacing:mm_Width_Fix(5)];
         [self.classView addSubview:item];
         
 //        [item setImage:[UIImage imageNamed:model] forState:UIControlStateNormal];

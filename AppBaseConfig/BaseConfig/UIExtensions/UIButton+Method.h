@@ -102,51 +102,30 @@ NS_ASSUME_NONNULL_BEGIN
                                  size:(CGSize)size;
 @end
 
-#pragma mark --- 自定义按钮
+
+#pragma mark -- 按钮文字间距
+
 typedef NS_ENUM(NSUInteger, ButtonEdgeInsetsStyle) {
-    ButtonEdgeInsetsStyleTop, // image在上，label在下
     ButtonEdgeInsetsStyleLeft, // image在左，label在右
+    ButtonEdgeInsetsStyleRight, // image在右，label在左
+    ButtonEdgeInsetsStyleTop, // image在上，label在下
     ButtonEdgeInsetsStyleBottom, // image在下，label在上
-    ButtonEdgeInsetsStyleRight // image在右，label在左
 };
 
-@interface UIButton (UI)
-
-/**
- *  设置button的titleLabel和imageView的布局样式，及间距
- *
- *  @param style titleLabel和imageView的布局样式
- *  @param space titleLabel和imageView的间距
- */
-- (void)mm_layoutButtonWithEdgeInsetsStyle:(ButtonEdgeInsetsStyle)style
-                        imageTitleSpace:(CGFloat)space;
-
-// 水平居中的img和title之间的间距
-- (void)mm_verticalCenterImageAndTitleWithSpacing:(float)spacing;
-@end
-
-#pragma mark -- 另一个自定义button
-typedef NS_ENUM(NSInteger, SSImagePositionType) {
-    SSImagePositionTypeLeft,   //图片在左，标题在右，默认风格
-    SSImagePositionTypeRight,  //图片在右，标题在左
-    SSImagePositionTypeTop,    //图片在上，标题在下
-    SSImagePositionTypeBottom  //图片在下，标题在上
+typedef NS_ENUM(NSInteger, ButtonEdgeType) {
+    ButtonEdgeTypeTitle,//标题
+    ButtonEdgeTypeImage//图片
 };
 
-typedef NS_ENUM(NSInteger, SSEdgeInsetsType) {
-    SSEdgeInsetsTypeTitle,//标题
-    SSEdgeInsetsTypeImage//图片
-};
-
-typedef NS_ENUM(NSInteger, SSMarginType) {
-    SSMarginTypeTop         ,
-    SSMarginTypeBottom      ,
-    SSMarginTypeLeft        ,
-    SSMarginTypeRight       ,
-    SSMarginTypeTopLeft     ,
-    SSMarginTypeTopRight    ,
-    SSMarginTypeBottomLeft  ,
-    SSMarginTypeBottomRight
+typedef NS_ENUM(NSInteger, ButtonMarginType) {
+    ButtonMarginTypeTop         ,
+    ButtonMarginTypeBottom      ,
+    ButtonMarginTypeLeft        ,
+    ButtonMarginTypeRight       ,
+    ButtonMarginTypeTopLeft     ,
+    ButtonMarginTypeTopRight    ,
+    ButtonMarginTypeBottomLeft  ,
+    ButtonMarginTypeBottomRight
 };
 
 /**
@@ -169,32 +148,15 @@ typedef NS_ENUM(NSInteger, SSMarginType) {
  *  @param type    图片位置类型
  *  @param spacing 图片和标题之间的间隙
  */
-- (void)setImagePositionWithType:(SSImagePositionType)type spacing:(CGFloat)spacing;
+- (void)mm_setImagePositionWithType:(ButtonEdgeInsetsStyle)type spacing:(CGFloat)spacing;
 
 /**
  *  按钮只设置了title or image，该方法可以改变它们的位置
- *
- *  @param edgeInsetsType <#edgeInsetsType description#>
- *  @param marginType     <#marginType description#>
- *  @param margin         <#margin description#>
+ *  @param edgeInsetsType  方向
+ *  @param marginType     图片还是文字
+ *  @param margin       间距
  */
-- (void)setEdgeInsetsWithType:(SSEdgeInsetsType)edgeInsetsType marginType:(SSMarginType)marginType margin:(CGFloat)margin;
-
-
-
-/**
- *  图片在上，标题在下
- *
- *  @param spacing image 和 title 之间的间隙
- */
-- (void)setImageUpTitleDownWithSpacing:(CGFloat)spacing __deprecated_msg("Method deprecated. Use `setImagePositionWithType:spacing:`");
-
-/**
- *  图片在右，标题在左
- *
- *  @param spacing image 和 title 之间的间隙
- */
-- (void)setImageRightTitleLeftWithSpacing:(CGFloat)spacing __deprecated_msg("Method deprecated. Use `setImagePositionWithType:spacing:`");
+- (void)mm_setEdgeInsetsWithType:(ButtonMarginType)edgeInsetsType marginType:(ButtonEdgeType)marginType margin:(CGFloat)margin;
 
 @end
 

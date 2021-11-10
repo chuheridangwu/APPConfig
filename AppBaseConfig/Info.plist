@@ -27,7 +27,7 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>是否允许访问您的媒体资料库？</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>当前功能需要保存图片到相册</string>
+	<string>是否允许保存图片到相册？</string>
 	<key>NSContactsUsageDescription</key>
 	<string>是否允许访问您的通讯录？</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

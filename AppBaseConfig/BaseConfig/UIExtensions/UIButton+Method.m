@@ -128,81 +128,6 @@
 }
 @end
 
-#pragma mark -- 自定义button
-
-@implementation UIButton(UI)
-
-- (void)mm_layoutButtonWithEdgeInsetsStyle:(ButtonEdgeInsetsStyle)style
-                        imageTitleSpace:(CGFloat)space
-{
-    // 1. 得到imageView和titleLabel的宽、高
-    CGFloat imageWith = self.imageView.frame.size.width;
-    CGFloat imageHeight = self.imageView.frame.size.height;
-    
-    CGFloat labelWidth = 0.0;
-    CGFloat labelHeight = 0.0;
-    if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
-        // 由于iOS8中titleLabel的size为0，用下面的这种设置
-        labelWidth = self.titleLabel.intrinsicContentSize.width;
-        labelHeight = self.titleLabel.intrinsicContentSize.height;
-    } else {
-        labelWidth = self.titleLabel.frame.size.width;
-        labelHeight = self.titleLabel.frame.size.height;
-    }
-    UIEdgeInsets imageEdgeInsets = UIEdgeInsetsZero;
-    UIEdgeInsets labelEdgeInsets = UIEdgeInsetsZero;
-    // 3. 根据style和space得到imageEdgeInsets和labelEdgeInsets的值
-    switch (style) {
-        case ButtonEdgeInsetsStyleTop:
-        {
-            imageEdgeInsets = UIEdgeInsetsMake(-labelHeight-space/2.0, 0, 0, -labelWidth);
-            labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith, -imageHeight-space/2.0, 0);
-        }
-            break;
-        case ButtonEdgeInsetsStyleLeft:
-        {
-            imageEdgeInsets = UIEdgeInsetsMake(0, -space/2.0, 0, space/2.0);
-            labelEdgeInsets = UIEdgeInsetsMake(0, space/2.0, 0, -space/2.0);
-        }
-            break;
-        case ButtonEdgeInsetsStyleBottom:
-        {
-            imageEdgeInsets = UIEdgeInsetsMake(0, 0, -labelHeight-space/2.0, -labelWidth);
-            labelEdgeInsets = UIEdgeInsetsMake(-imageHeight-space/2.0, -imageWith, 0, 0);
-        }
-            break;
-        case ButtonEdgeInsetsStyleRight:
-        {
-            imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth+space/2.0, 0, -labelWidth-space/2.0);
-            labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith-space/2.0, 0, imageWith+space/2.0);
-        }
-            break;
-        default:
-            break;
-    }
-    // 4. 赋值
-    self.titleEdgeInsets = labelEdgeInsets;
-    self.imageEdgeInsets = imageEdgeInsets;
-}
-
-- (void)mm_verticalCenterImageAndTitleWithSpacing:(float)spacing
-{
-    // get the size of the elements here for readability
-    CGSize imageSize = self.imageView.frame.size;
-    //    CGSize titleSize = self.titleLabel.frame.size;
-    CGSize titleSize = [self.titleLabel.text boundingRectWithSize:self.bounds.size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.titleLabel.font} context:nil].size;
-    // get the height they will take up as a unit
-    CGFloat totalHeight = (imageSize.height + titleSize.height + spacing);
-    
-    // raise the image and push it right to center it
-    self.imageEdgeInsets = UIEdgeInsetsMake(-(totalHeight - imageSize.height), 0.0, 0.0, -titleSize.width);
-    
-    // lower the text and push it left to center it
-    self.titleEdgeInsets = UIEdgeInsetsMake(0.0, -imageSize.width, -(totalHeight - titleSize.height), 0.0);
-}
-
-@end
-
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
 #define SS_SINGLELINE_TEXTSIZE(text, font) [text length] > 0 ? [text \
@@ -212,22 +137,22 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
 #endif
 @implementation UIButton (Edge)
 
-- (void)setImagePositionWithType:(SSImagePositionType)type spacing:(CGFloat)spacing {
+- (void)mm_setImagePositionWithType:(ButtonEdgeInsetsStyle)type spacing:(CGFloat)spacing {
     CGSize imageSize = [self imageForState:UIControlStateNormal].size;
     CGSize titleSize = SS_SINGLELINE_TEXTSIZE([self titleForState:UIControlStateNormal], self.titleLabel.font);
     
     switch (type) {
-        case SSImagePositionTypeLeft: {
+        case ButtonEdgeInsetsStyleLeft: {
             self.titleEdgeInsets = UIEdgeInsetsMake(0, spacing, 0, 0);
             self.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, spacing);
             break;
         }
-        case SSImagePositionTypeRight: {
+        case ButtonEdgeInsetsStyleRight: {
             self.titleEdgeInsets = UIEdgeInsetsMake(0, - imageSize.width, 0, imageSize.width + spacing);
             self.imageEdgeInsets = UIEdgeInsetsMake(0, titleSize.width + spacing, 0, - titleSize.width);
             break;
         }
-        case SSImagePositionTypeTop: {
+        case ButtonEdgeInsetsStyleTop: {
             // lower the text and push it left so it appears centered
             //  below the image
             self.titleEdgeInsets = UIEdgeInsetsMake(0, - imageSize.width, - (imageSize.height + spacing), 0);
@@ -237,7 +162,7 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
             self.imageEdgeInsets = UIEdgeInsetsMake(- (titleSize.height + spacing), 0, 0, - titleSize.width);
             break;
         }
-        case SSImagePositionTypeBottom: {
+        case ButtonEdgeInsetsStyleBottom: {
             self.titleEdgeInsets = UIEdgeInsetsMake(- (imageSize.height + spacing), - imageSize.width, 0, 0);
             self.imageEdgeInsets = UIEdgeInsetsMake(0, 0, - (titleSize.height + spacing), - titleSize.width);
             break;
@@ -245,17 +170,9 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
     }
 }
 
-- (void)setImageUpTitleDownWithSpacing:(CGFloat)spacing {
-    [self setImagePositionWithType:SSImagePositionTypeTop spacing:spacing];
-}
-
-- (void)setImageRightTitleLeftWithSpacing:(CGFloat)spacing {
-    [self setImagePositionWithType:SSImagePositionTypeRight spacing:spacing];
-}
-
-- (void)setEdgeInsetsWithType:(SSEdgeInsetsType)edgeInsetsType marginType:(SSMarginType)marginType margin:(CGFloat)margin {
+- (void)mm_setEdgeInsetsWithType:(ButtonMarginType)edgeInsetsType marginType:(ButtonEdgeType)marginType margin:(CGFloat)margin {
     CGSize itemSize = CGSizeZero;
-    if (edgeInsetsType == SSEdgeInsetsTypeTitle) {
+    if (edgeInsetsType == ButtonEdgeTypeTitle) {
         itemSize = SS_SINGLELINE_TEXTSIZE([self titleForState:UIControlStateNormal], self.titleLabel.font);
     } else {
         itemSize = [self imageForState:UIControlStateNormal].size;
@@ -268,42 +185,42 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
     NSInteger verticalSignFlag = 1;
     
     switch (marginType) {
-        case SSMarginTypeTop: {
+        case ButtonMarginTypeTop: {
             horizontalSignFlag = 0;
             verticalSignFlag = - 1;
             break;
         }
-        case SSMarginTypeBottom: {
+        case ButtonMarginTypeBottom: {
             horizontalSignFlag = 0;
             verticalSignFlag = 1;
             break;
         }
-        case SSMarginTypeLeft: {
+        case ButtonMarginTypeLeft: {
             horizontalSignFlag = - 1;
             verticalSignFlag = 0;
             break;
         }
-        case SSMarginTypeRight: {
+        case ButtonMarginTypeRight: {
             horizontalSignFlag = 1;
             verticalSignFlag = 0;
             break;
         }
-        case SSMarginTypeTopLeft: {
+        case ButtonMarginTypeTopLeft: {
             horizontalSignFlag = - 1;
             verticalSignFlag = - 1;
             break;
         }
-        case SSMarginTypeTopRight: {
+        case ButtonMarginTypeTopRight: {
             horizontalSignFlag = 1;
             verticalSignFlag = - 1;
             break;
         }
-        case SSMarginTypeBottomLeft: {
+        case ButtonMarginTypeBottomLeft: {
             horizontalSignFlag = - 1;
             verticalSignFlag = 1;
             break;
         }
-        case SSMarginTypeBottomRight: {
+        case ButtonMarginTypeBottomRight: {
             horizontalSignFlag = 1;
             verticalSignFlag = 1;
             break;
@@ -311,7 +228,7 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
     }
     
     UIEdgeInsets edgeInsets = UIEdgeInsetsMake(vertivalDelta * verticalSignFlag, horizontalDelta * horizontalSignFlag, - vertivalDelta * verticalSignFlag, - horizontalDelta * horizontalSignFlag);
-    if (edgeInsetsType == SSEdgeInsetsTypeTitle) {
+    if (edgeInsetsType == ButtonEdgeTypeTitle) {
         self.titleEdgeInsets = edgeInsets;
     } else {
         self.imageEdgeInsets = edgeInsets;
