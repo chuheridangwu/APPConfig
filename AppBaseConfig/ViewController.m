@@ -9,7 +9,7 @@
 #import "BannerController.h"
 #import "CategoryController.h"
 #import "DianZanController.h"
-
+#import "LocationManagerTool.h"
 
 
 
@@ -45,6 +45,10 @@ typedef NS_ENUM(NSInteger,CellType) {
     ];
 
     [self.view addSubview:self.tableView];
+    
+//    [[LocationManagerTool shareLocation] getLocationAuthorization:^(CLAuthorizationStatus status) {
+//        NSLog(@"定位权限 --- %d",status);
+//    }];
     
 //    [AppPreviewView showPreviewView];
 }

@@ -74,6 +74,7 @@
 		8781C0C92722C79C00B5C049 /* AppPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781C0942722C79B00B5C049 /* AppPreviewView.m */; };
 		8781C0CA2722C79C00B5C049 /* MLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781C0962722C79B00B5C049 /* MLoadingView.m */; };
 		8781C0CB2722C79C00B5C049 /* MLongTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781C0982722C79B00B5C049 /* MLongTitleLabel.m */; };
+		878C93E3273CFB1F00FF1F7E /* LocationManagerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 878C93E2273CFB1F00FF1F7E /* LocationManagerTool.m */; };
 		87917FA42729503D006CDB8C /* MModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 87917FA32729503D006CDB8C /* MModelTool.m */; };
 		87A12AB02738229600B2B4B1 /* EditImgController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AAF2738229600B2B4B1 /* EditImgController.m */; };
 		87CEB40126302EDA003ACA17 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB40026302EDA003ACA17 /* AppDelegate.m */; };
@@ -245,6 +246,8 @@
 		8781C0982722C79B00B5C049 /* MLongTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLongTitleLabel.m; sourceTree = "<group>"; };
 		8781C0992722C79B00B5C049 /* MacroHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroHeader.h; sourceTree = "<group>"; };
 		8781C0CC2722CAB500B5C049 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		878C93E1273CFB1F00FF1F7E /* LocationManagerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManagerTool.h; sourceTree = "<group>"; };
+		878C93E2273CFB1F00FF1F7E /* LocationManagerTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManagerTool.m; sourceTree = "<group>"; };
 		87917FA22729503D006CDB8C /* MModelTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MModelTool.h; sourceTree = "<group>"; };
 		87917FA32729503D006CDB8C /* MModelTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MModelTool.m; sourceTree = "<group>"; };
 		87A12AAE2738229600B2B4B1 /* EditImgController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditImgController.h; sourceTree = "<group>"; };
@@ -681,6 +684,8 @@
 			children = (
 				87F69A9C272B9BD6007AE3FF /* ContactsTool.h */,
 				87F69A9D272B9BD6007AE3FF /* ContactsTool.m */,
+				878C93E1273CFB1F00FF1F7E /* LocationManagerTool.h */,
+				878C93E2273CFB1F00FF1F7E /* LocationManagerTool.m */,
 				8742AEF8273BCAEE0008DCAB /* Photo */,
 			);
 			path = Authority;
@@ -938,6 +943,7 @@
 				871BE2DD26F1F97700647952 /* CategoryController.m in Sources */,
 				8781C0CA2722C79C00B5C049 /* MLoadingView.m in Sources */,
 				87CEB40726302EDA003ACA17 /* ViewController.m in Sources */,
+				878C93E3273CFB1F00FF1F7E /* LocationManagerTool.m in Sources */,
 				8781C0AF2722C79C00B5C049 /* YYSpriteSheetImage.m in Sources */,
 				8781C0B22722C79C00B5C049 /* YYFrameImage.m in Sources */,
 				8781C0C22722C79C00B5C049 /* UICollectionView+MExtension.m in Sources */,

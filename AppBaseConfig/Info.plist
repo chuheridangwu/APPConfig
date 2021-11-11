@@ -30,12 +30,12 @@
 	<string>是否允许保存图片到相册？</string>
 	<key>NSContactsUsageDescription</key>
 	<string>是否允许访问您的通讯录？</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>是否允许访问您当前的位置？</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>是否允许访问您当前的位置？</string>
+	<string>iOS11之前 无论前后台都可以定位 - 是否允许访问您当前的位置？</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>只有前台才允许定位 - 是否允许访问您当前的位置？</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>是否允许访问您当前的位置？</string>
+	<string>无论前后台都可以定位 - 是否允许访问您当前的位置？</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
