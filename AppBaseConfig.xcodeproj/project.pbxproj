@@ -20,6 +20,8 @@
 		871BE2E726F1FAC600647952 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 871BE2E626F1FAC600647952 /* CategoryModel.m */; };
 		871BE2EB26F202CF00647952 /* home_hot_top@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871BE2E926F202CE00647952 /* home_hot_top@3x.png */; };
 		871BE2EC26F202CF00647952 /* home_hot_bottom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871BE2EA26F202CF00647952 /* home_hot_bottom@3x.png */; };
+		873AC129273D24F200FA36C4 /* MNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 873AC128273D24F200FA36C4 /* MNetworkTool.m */; };
+		873AC12F273D25F600FA36C4 /* MParsingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 873AC12E273D25F600FA36C4 /* MParsingTool.m */; };
 		8742AEF4273BBAD10008DCAB /* HeaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8742AEF3273BBAD10008DCAB /* HeaderController.m */; };
 		8742AEF7273BCAD60008DCAB /* EditCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8742AEF6273BCAD60008DCAB /* EditCameraController.m */; };
 		8756526026F496960029C2E5 /* DianZanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8756525F26F496960029C2E5 /* DianZanController.m */; };
@@ -136,6 +138,11 @@
 		871BE2E626F1FAC600647952 /* CategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
 		871BE2E926F202CE00647952 /* home_hot_top@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_hot_top@3x.png"; sourceTree = "<group>"; };
 		871BE2EA26F202CF00647952 /* home_hot_bottom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_hot_bottom@3x.png"; sourceTree = "<group>"; };
+		873AC127273D24F200FA36C4 /* MNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNetworkTool.h; sourceTree = "<group>"; };
+		873AC128273D24F200FA36C4 /* MNetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNetworkTool.m; sourceTree = "<group>"; };
+		873AC12D273D25F600FA36C4 /* MParsingTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MParsingTool.h; sourceTree = "<group>"; };
+		873AC12E273D25F600FA36C4 /* MParsingTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MParsingTool.m; sourceTree = "<group>"; };
+		873AC130273D26C200FA36C4 /* ApiHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiHeader.h; sourceTree = "<group>"; };
 		8742AEF2273BBAD10008DCAB /* HeaderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderController.h; sourceTree = "<group>"; };
 		8742AEF3273BBAD10008DCAB /* HeaderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderController.m; sourceTree = "<group>"; };
 		8742AEF5273BCAD50008DCAB /* EditCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCameraController.h; sourceTree = "<group>"; };
@@ -357,6 +364,18 @@
 			path = "商品分类";
 			sourceTree = "<group>";
 		};
+		873AC123273D246800FA36C4 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				873AC130273D26C200FA36C4 /* ApiHeader.h */,
+				873AC127273D24F200FA36C4 /* MNetworkTool.h */,
+				873AC128273D24F200FA36C4 /* MNetworkTool.m */,
+				873AC12D273D25F600FA36C4 /* MParsingTool.h */,
+				873AC12E273D25F600FA36C4 /* MParsingTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		8742AEF8273BCAEE0008DCAB /* Photo */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +403,7 @@
 		8781C0262722C79B00B5C049 /* BaseConfig */ = {
 			isa = PBXGroup;
 			children = (
+				873AC123273D246800FA36C4 /* Tool */,
 				87F69A9B272B9B74007AE3FF /* Authority */,
 				87917F9E2729500F006CDB8C /* Model */,
 				8781C0272722C79B00B5C049 /* SSKeychain */,
@@ -951,6 +971,7 @@
 				871BE2E126F1FA7E00647952 /* CategoryView1.m in Sources */,
 				8781C0AB2722C79C00B5C049 /* YYCache.m in Sources */,
 				8756526026F496960029C2E5 /* DianZanController.m in Sources */,
+				873AC12F273D25F600FA36C4 /* MParsingTool.m in Sources */,
 				8781C09C2722C79B00B5C049 /* NSDate+Method.m in Sources */,
 				871BE2D926F1F10900647952 /* DSRHomeHeadPreview.m in Sources */,
 				87FF6F93271D3CBC008649C9 /* WCLRecordEngine.m in Sources */,
@@ -1011,6 +1032,7 @@
 				87F69A9E272B9BD6007AE3FF /* ContactsTool.m in Sources */,
 				8781C0AD2722C79C00B5C049 /* YYMemoryCache.m in Sources */,
 				8781C0BA2722C79C00B5C049 /* YYWebImageOperation.m in Sources */,
+				873AC129273D24F200FA36C4 /* MNetworkTool.m in Sources */,
 				8781C09B2722C79B00B5C049 /* NSDictionary+Method.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
