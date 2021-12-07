@@ -111,6 +111,13 @@
     return responseJSON;
 }
 
+/// 字符串转数组
+- (NSArray *)mm_jsonStringToArray{
+    NSData *JSONData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSArray *ary = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableLeaves error:nil];
+    return ary;
+}
+
 @end
 
 #pragma mark -- 计算文字的宽高
@@ -656,10 +663,14 @@
         }
         hex = [letter stringByAppendingString:hex];
         if (decimal == 0) {
-            
             break;
         }
     }
+    
+    if (hex.length == 1) {
+        hex = [NSString stringWithFormat:@"0%@",hex];
+    }
+    
     return hex;
 }
 
@@ -802,4 +813,13 @@
     }
     return data;
 }
+
+// 十六进制字符串 数据转成 十进制
+- (NSString*)mm_decimal{
+    unsigned long long result = 0;
+    NSScanner *scanner = [NSScanner scannerWithString:self];
+    [scanner scanHexLongLong:&result];
+    return  [NSString stringWithFormat:@"%lld",result];
+}
+
 @end

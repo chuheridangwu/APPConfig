@@ -26,6 +26,7 @@
 		8742AEF7273BCAD60008DCAB /* EditCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8742AEF6273BCAD60008DCAB /* EditCameraController.m */; };
 		8756526026F496960029C2E5 /* DianZanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8756525F26F496960029C2E5 /* DianZanController.m */; };
 		8756526326F496D60029C2E5 /* AdmireAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8756526226F496D60029C2E5 /* AdmireAnimationView.m */; };
+		876B24D62747B2A8003D5911 /* UIViewController+Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 876B24D52747B2A8003D5911 /* UIViewController+Method.m */; };
 		8781C09A2722C79B00B5C049 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781C0292722C79B00B5C049 /* SSKeychain.m */; };
 		8781C09B2722C79B00B5C049 /* NSDictionary+Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781C02C2722C79B00B5C049 /* NSDictionary+Method.m */; };
 		8781C09C2722C79B00B5C049 /* NSDate+Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781C02E2722C79B00B5C049 /* NSDate+Method.m */; };
@@ -151,6 +152,8 @@
 		8756525F26F496960029C2E5 /* DianZanController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DianZanController.m; sourceTree = "<group>"; };
 		8756526126F496D60029C2E5 /* AdmireAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmireAnimationView.h; sourceTree = "<group>"; };
 		8756526226F496D60029C2E5 /* AdmireAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmireAnimationView.m; sourceTree = "<group>"; };
+		876B24D42747B2A8003D5911 /* UIViewController+Method.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Method.h"; sourceTree = "<group>"; };
+		876B24D52747B2A8003D5911 /* UIViewController+Method.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Method.m"; sourceTree = "<group>"; };
 		8781C0282722C79B00B5C049 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		8781C0292722C79B00B5C049 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		8781C02B2722C79B00B5C049 /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
@@ -568,6 +571,8 @@
 			children = (
 				8781C07D2722C79B00B5C049 /* UIBarButtonItem+Method.h */,
 				8781C0872722C79B00B5C049 /* UIBarButtonItem+Method.m */,
+				876B24D42747B2A8003D5911 /* UIViewController+Method.h */,
+				876B24D52747B2A8003D5911 /* UIViewController+Method.m */,
 				8781C0762722C79B00B5C049 /* UIButton+Method.h */,
 				8781C0802722C79B00B5C049 /* UIButton+Method.m */,
 				8781C07E2722C79B00B5C049 /* UICollectionView+MExtension.h */,
@@ -1004,6 +1009,7 @@
 				8742AEF4273BBAD10008DCAB /* HeaderController.m in Sources */,
 				8781C0B82722C79C00B5C049 /* UIImage+YYWebImage.m in Sources */,
 				8781C0C32722C79C00B5C049 /* UIBarButtonItem+Method.m in Sources */,
+				876B24D62747B2A8003D5911 /* UIViewController+Method.m in Sources */,
 				8781C09E2722C79B00B5C049 /* NSArray+Method.m in Sources */,
 				8781C09D2722C79B00B5C049 /* NSData+Encryption.m in Sources */,
 				8781C0A12722C79B00B5C049 /* NSMutableString+Method.m in Sources */,

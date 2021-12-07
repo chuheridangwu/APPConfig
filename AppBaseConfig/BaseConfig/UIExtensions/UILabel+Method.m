@@ -24,6 +24,12 @@
     return label;
 }
 
++ (UILabel *)mm_createLabel:(UIColor *)color
+              textAlignment:(NSTextAlignment)alignment
+                       text:(NSString *)text{
+    return [self mm_createLabel:color fontSize:16 textAlignment:alignment text:text];
+}
+
 - (void)mm_text:(NSString *)text
            font:(UIFont *)font
       textColor:(UIColor *)textColor
@@ -31,6 +37,16 @@
     self.text = text;
     self.font = font;
     self.textColor = textColor;
+}
+
+/// 设置粗体
+- (void)mm_setBoldFontSize:(CGFloat)fontSize{
+    self.font = [UIFont fontWithName:@"Helvetica-Bold" size:fontSize];
+}
+
+/// 粗体加斜体
+- (void)mm_setBoldObliqueFontSize:(CGFloat)fontSize{
+    self.font = [UIFont fontWithName:@"Helvetica-BoldOblique" size:fontSize];
 }
 
 - (void)mm_adaptiveHeight:(NSString *)text font:(CGFloat)font textColor:(UIColor *)textColor
@@ -65,3 +81,4 @@
     self.width = rect.size.width;
 }
 @end
+

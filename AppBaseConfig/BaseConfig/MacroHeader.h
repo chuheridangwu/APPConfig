@@ -31,6 +31,7 @@
 #import "UIView+Frame.h"
 #import "UIFont+Method.h"
 #import "UIBarButtonItem+Method.h"
+#import "UIViewController+Method.h"
 
 #import "NSData+Encryption.h"
 #import "NSDate+Method.h"

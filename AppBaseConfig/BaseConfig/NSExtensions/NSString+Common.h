@@ -36,6 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 字符串转字典
 - (NSDictionary *)mm_jsonStringToDictionary;
 
+/// 字符串转数组
+- (NSArray *)mm_jsonStringToArray;
+
 @end
 
 @interface NSString (Size)
@@ -250,6 +253,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 十六进制字符串 数据转成 十六进制的data数据   比如  @"00A40402" = <00A40402>
 - (NSData *)mm_hexToBytes:(NSString *)str;
+
+// 十六进制字符串 数据转成 十进制
+- (NSString*)mm_decimal;
 @end
 
 NS_ASSUME_NONNULL_END
