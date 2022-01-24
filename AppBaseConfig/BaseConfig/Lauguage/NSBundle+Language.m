@@ -27,7 +27,7 @@ NSString* LocalizationString(NSString *key){
     //获取对应语言的字符串
     // testText 文本的key
     // localizedStrings 是.strings文件的文件名
-    NSString *realString = [[NSBundle bundleWithPath:path] localizedStringForKey:key value:nil table:@"LaunchScreen"];
+    NSString *realString = [[NSBundle bundleWithPath:path] localizedStringForKey:key value:nil table:@"Localizable"];
     return realString;
 }
 
